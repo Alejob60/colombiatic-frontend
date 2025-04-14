@@ -37,3 +37,9 @@ git clone https://github.com/Alejob60/colombiatic-frontend.git
 cd colombiatic-frontend
 npm install
 npm run dev
+
+Contacto
+ColombiaTIC Ingeniería SAS
+Soluciones tecnológicas IA - Blockchain - Ciberseguridad - Gobierno Digital
+Página Oficial: https://colombiatic.com.co
+
