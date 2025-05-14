@@ -1,31 +1,87 @@
 // src/app/contact/page.tsx
+"use client";
+
+import { useState } from "react";
+
 export default function ContactPage() {
-    return (
-      <main className="min-h-screen p-10">
-        <h1 className="text-3xl font-bold mb-4">Contáctanos</h1>
-        <p className="mb-4">Estamos listos para asesorarte en tu próximo proyecto de innovación tecnológica.</p>
-        <form className="space-y-4 max-w-md">
+  const [status, setStatus] = useState("");
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    const formData = new FormData(e.currentTarget);
+    const message = {
+      name: formData.get("name"),
+      email: formData.get("email"),
+      message: formData.get("message"),
+    };
+
+    try {
+      const response = await fetch("https://formspree.io/f/xgegjykr", {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+        },
+        body: new FormData(e.currentTarget),
+      });
+
+      if (response.ok) {
+        setStatus("✅ Mensaje enviado correctamente.");
+        e.currentTarget.reset();
+      } else {
+        setStatus("❌ Hubo un error al enviar el mensaje.");
+      }
+    } catch (error) {
+      setStatus("❌ Error de red. Intenta nuevamente.");
+    }
+  };
+
+  return (
+    <section className="min-h-screen bg-background text-white py-20 px-6">
+      <div className="max-w-3xl mx-auto text-center">
+        <h1 className="text-4xl font-bold mb-4">Contáctanos</h1>
+        <p className="text-textSecondary mb-8">
+          Escríbenos para alianzas, proyectos o asesoría especializada.
+        </p>
+
+        <form onSubmit={handleSubmit} className="space-y-6 text-left">
           <input
             type="text"
-            placeholder="Nombre"
-            className="w-full p-2 border rounded"
+            name="name"
+            placeholder="Tu nombre"
+            required
+            className="w-full px-4 py-3 rounded-md bg-surface text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-primary"
           />
           <input
             type="email"
-            placeholder="Correo electrónico"
-            className="w-full p-2 border rounded"
+            name="email"
+            placeholder="Tu correo"
+            required
+            className="w-full px-4 py-3 rounded-md bg-surface text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-primary"
           />
           <textarea
-            placeholder="Mensaje"
-            className="w-full p-2 border rounded"
-          />
+            name="message"
+            placeholder="Escribe tu mensaje aquí..."
+            rows={5}
+            required
+            className="w-full px-4 py-3 rounded-md bg-surface text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-primary"
+          ></textarea>
           <button
             type="submit"
-            className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+            className="w-full bg-primary hover:bg-blue-700 text-white font-semibold py-3 rounded-md transition"
           >
-            Enviar
+            Enviar mensaje
           </button>
         </form>
-      </main>
-    );
-  }
+
+        {status && <p className="mt-4 text-sm text-green-400">{status}</p>}
+
+        <div className="mt-10 text-sm text-muted">
+          <p>📞 WhatsApp: +57 302 6404359</p>
+          <p>📧 Email: prime@colombiatic.com.co</p>
+          <p>📍 Cali, Valle del Cauca, Colombia</p>
+        </div>
+      </div>
+    </section>
+  );
+}
