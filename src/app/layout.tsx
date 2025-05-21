@@ -4,7 +4,10 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
+<<<<<<< HEAD
 import Footer from "@/components/layout/Footer";
+=======
+>>>>>>> feature/hero-section
 
 // Tipografías de Google (Geist)
 const geistSans = Geist({
@@ -48,11 +51,16 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} font-sans bg-background text-textPrimary antialiased min-h-screen`}
       >
+<<<<<<< HEAD
         <div className="relative z-10">
           <Navbar />
           <main className="min-h-screen">{children}</main>
           <Footer />
         </div>
+=======
+        <Navbar />
+        <main className="pt-20">{children}</main>
+>>>>>>> feature/hero-section
       </body>
     </html>
   );

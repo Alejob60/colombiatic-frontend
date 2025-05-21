@@ -9,13 +9,13 @@ export default function ContactPage() {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    const formData = new FormData(e.currentTarget);
-    const message = {
+    //const formData = new FormData(e.currentTarget);
+    /* const message = {
       name: formData.get("name"),
       email: formData.get("email"),
       message: formData.get("message"),
     };
-
+ */
     try {
       const response = await fetch("https://formspree.io/f/xgegjykr", {
         method: "POST",

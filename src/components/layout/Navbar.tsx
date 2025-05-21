@@ -1,65 +1,71 @@
 "use client";
 
-import Link from "next/link";
 import { useState } from "react";
-import { Menu } from "lucide-react";
-import clsx from "clsx";
+import Link from "next/link";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 z-50 w-full bg-black/60 backdrop-blur-md border-b border-white/10 transition-all duration-300">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+    <header className="w-full fixed top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200">
+      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
         {/* Logo */}
-        <Link href="/" className="text-white font-semibold tracking-tight text-lg md:text-xl transition duration-200 hover:opacity-90">
-          <span className="text-white">Colombia</span>
-          <span className="text-primary">TIC</span>
+        <Link href="/" className="text-xl font-bold text-blue-600">
+          Colombia TIC
         </Link>
 
-        {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-white/70">
-          <Link href="/" className="hover:text-white transition-colors duration-200">Inicio</Link>
-          <Link href="/about" className="hover:text-white transition-colors duration-200">Nosotros</Link>
-          <Link href="/services" className="hover:text-white transition-colors duration-200">Servicios</Link>
-          <Link href="/contact" className="hover:text-white transition-colors duration-200">Contacto</Link>
-        </nav>
+        {/* Desktop menu */}
+        <div className="hidden md:flex gap-6 text-sm text-gray-700 font-medium">
+          <Link href="#nosotros" className="hover:text-blue-600 transition">Nosotros</Link>
+          <Link href="#servicios" className="hover:text-blue-600 transition">Servicios</Link>
+          <Link href="#contacto" className="hover:text-blue-600 transition">Contacto</Link>
+        </div>
 
-        {/* CTA */}
-        <div className="hidden md:flex">
+        {/* CTA Button */}
+        <div className="hidden md:block">
           <Link
-            href="#ingresar"
-            className="bg-primary hover:bg-blue-700 text-white text-sm font-medium px-5 py-2 rounded-lg shadow-lg transition-all duration-300"
+            href="#contacto"
+            className="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-blue-700 transition"
           >
-            Ingresar
+            Agenda una reunión
           </Link>
         </div>
 
-        {/* Mobile Menu Button */}
+        {/* Mobile button */}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="md:hidden text-white hover:opacity-80"
-          aria-label="Abrir menú móvil"
+          className="md:hidden text-gray-700 focus:outline-none"
+          title={isOpen ? "Close menu" : "Open menu"}
         >
-          <Menu size={24} />
-        </button>
-      </div>
-
-      {/* Mobile Nav */}
-      {isOpen && (
-        <nav className="md:hidden bg-black/90 border-t border-white/10 px-6 py-4 text-white text-sm space-y-3 animate-fade-in-down">
-          <Link href="/" onClick={() => setIsOpen(false)} className="block hover:text-primary">Inicio</Link>
-          <Link href="/about" onClick={() => setIsOpen(false)} className="block hover:text-primary">Nosotros</Link>
-          <Link href="#servicios" onClick={() => setIsOpen(false)} className="block hover:text-primary">Servicios</Link>
-          <Link href="#contacto" onClick={() => setIsOpen(false)} className="block hover:text-primary">Contacto</Link>
-          <Link
-            href="#ingresar"
-            onClick={() => setIsOpen(false)}
-            className="block bg-primary text-center text-white font-semibold px-4 py-2 mt-2 rounded-md transition"
+          <svg
+            className="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
           >
-            Ingresar
+            {isOpen ? (
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+            ) : (
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
+            )}
+          </svg>
+        </button>
+      </nav>
+
+      {/* Mobile menu */}
+      {isOpen && (
+        <div className="md:hidden px-4 pb-4 space-y-2 text-gray-700 text-sm font-medium">
+          <Link href="#nosotros" onClick={() => setIsOpen(false)} className="block hover:text-blue-600 transition">Nosotros</Link>
+          <Link href="#servicios" onClick={() => setIsOpen(false)} className="block hover:text-blue-600 transition">Servicios</Link>
+          <Link href="#contacto" onClick={() => setIsOpen(false)} className="block hover:text-blue-600 transition">Contacto</Link>
+          <Link
+            href="#contacto"
+            onClick={() => setIsOpen(false)}
+            className="block mt-2 bg-blue-600 text-white px-4 py-2 rounded-lg text-center hover:bg-blue-700 transition"
+          >
+            Agenda una reunión
           </Link>
-        </nav>
+        </div>
       )}
     </header>
   );
