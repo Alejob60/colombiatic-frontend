@@ -39,7 +39,7 @@ const services = [
 
 export default function ServicesPage() {
   return (
-    <section className="min-h-screen bg-[#0a0f1c] text-white px-6 py-24 md:px-20">
+    <section className="min-h-screen bg-background text-white px-6 py-24 md:px-20">
       <motion.div
         className="text-center max-w-3xl mx-auto mb-16"
         initial={{ opacity: 0, y: -30 }}

@@ -57,20 +57,22 @@ const services = [
 
 export default function ServicesSection() {
   return (
-    <section className="py-24 px-6 bg-gray-50 text-center">
-      <h2 className="text-4xl font-bold mb-4 text-gray-900">Nuestros Servicios</h2>
-      <p className="text-gray-600 mb-12 max-w-2xl mx-auto">
-        Soluciones tecnológicas estratégicas adaptadas a las necesidades del futuro.
+    <section className="py-24 px-6 relative bg-background text-white text-center">
+      <h2 className="text-4xl md:text-5xl font-extrabold mb-4  from-primary via-tertiary to-accent bg-clip-text  drop-shadow-lg">
+        Nuestros Servicios
+      </h2>
+      <p className="mb-12 max-w-2xl mx-auto text-xl md:text-2xl font-medium text-gray-300">
+        Soluciones tecnológicas estratégicas <span className="text-accent font-semibold">adaptadas al futuro</span> de tu organización.
       </p>
       <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
         {services.map((service, index) => (
           <div
             key={index}
-            className="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-all"
+            className="bg-surface/90 rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all border border-gray-800"
           >
             <div className="mb-4">{service.icon}</div>
-            <h3 className="text-xl font-semibold mb-2 text-gray-800">{service.title}</h3>
-            <p className="text-gray-500 text-sm">{service.description}</p>
+            <h3 className="text-xl font-bold mb-2 text-white">{service.title}</h3>
+            <p className="text-gray-400 text-sm">{service.description}</p>
           </div>
         ))}
       </div>
