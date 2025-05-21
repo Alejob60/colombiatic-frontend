@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 "use client";
 
 export default function Footer() {
@@ -38,7 +37,6 @@ export default function Footer() {
     </footer>
   );
 }
-=======
 // src/components/layout/Footer.tsx
 
 export default function Footer() {
@@ -84,4 +82,3 @@ export default function Footer() {
     );
   }
   
->>>>>>> feature/hero-section
