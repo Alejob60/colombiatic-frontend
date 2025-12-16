@@ -4,17 +4,10 @@
 import { useState } from "react";
 
 export default function ContactPage() {
-  const [status, setStatus] = useState("");
+  const [status, setStatus] = useState<{ message: string; isError: boolean } | null>(null);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-
-    const formData = new FormData(e.currentTarget);
-    const message = {
-      name: formData.get("name"),
-      email: formData.get("email"),
-      message: formData.get("message"),
-    };
 
     try {
       const response = await fetch("https://formspree.io/f/xgegjykr", {
@@ -26,13 +19,13 @@ export default function ContactPage() {
       });
 
       if (response.ok) {
-        setStatus("✅ Mensaje enviado correctamente.");
+        setStatus({ message: "✅ Mensaje enviado correctamente.", isError: false });
         e.currentTarget.reset();
       } else {
-        setStatus("❌ Hubo un error al enviar el mensaje.");
+        setStatus({ message: "❌ Hubo un error al enviar el mensaje.", isError: true });
       }
-    } catch (error) {
-      setStatus("❌ Error de red. Intenta nuevamente.");
+    } catch {
+      setStatus({ message: "❌ Error de red. Intenta nuevamente.", isError: true });
     }
   };
 
@@ -74,7 +67,15 @@ export default function ContactPage() {
           </button>
         </form>
 
-        {status && <p className="mt-4 text-sm text-green-400">{status}</p>}
+        {status && (
+          <p
+            className={`mt-4 text-sm ${
+              status.isError ? "text-red-400" : "text-green-400"
+            }`}
+          >
+            {status.message}
+          </p>
+        )}
 
         <div className="mt-10 text-sm text-muted">
           <p>📞 WhatsApp: +57 302 6404359</p>

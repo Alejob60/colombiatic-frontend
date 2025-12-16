@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { useState } from "react";
 import { Menu } from "lucide-react";
-import clsx from "clsx";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);

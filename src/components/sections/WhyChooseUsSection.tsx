@@ -56,6 +56,9 @@ export default function WhyChooseUsSection() {
         >
           ¿Por qué elegir a Colombia TIC?
         </motion.h2>
+        <p className="text-center text-lg md:text-2xl font-medium text-gray-300 mb-12 max-w-3xl mx-auto">
+  Innovación, <span className="text-accent font-semibold">seguridad</span> y soluciones a la medida para tu organización.
+</p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {features.map((feature, index) => (
