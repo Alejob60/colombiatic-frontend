@@ -40,7 +40,7 @@ export default function HelpPage() {
     {
       id: 5,
       question: "¿Cómo puedo contactar al soporte técnico?",
-      answer: "Puede contactar a nuestro soporte técnico a través del formulario de contacto en esta página, o enviando un correo a soporte@colombiatic.com."
+      answer: "Puede contactar a nuestro soporte técnico a través del formulario de contacto en esta página, o enviando un correo a soporte@colombiatic.com.co."
     }
   ];
 

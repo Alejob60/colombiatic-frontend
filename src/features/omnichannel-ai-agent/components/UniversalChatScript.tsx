@@ -61,7 +61,7 @@ export function generateEmbedScript(siteId: string) {
 <script>
   (function() {
     var script = document.createElement('script');
-    script.src = 'https://colombiatic.com/chat-widget.js?siteId=${siteId}';
+    script.src = 'https://colombiatic.com.co/chat-widget.js?siteId=${siteId}';
     script.async = true;
     document.head.appendChild(script);
     

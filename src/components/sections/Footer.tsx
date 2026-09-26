@@ -69,7 +69,7 @@ export default function Footer() {
               </div>
               <div className="flex items-center text-gray-400">
                 <Mail className="w-5 h-5 mr-3 text-primary" />
-                <span>contacto@colombiatic.com</span>
+                <span>contacto@colombiatic.com.co</span>
               </div>
             </div>
             

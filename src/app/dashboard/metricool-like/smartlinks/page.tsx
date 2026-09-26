@@ -22,7 +22,7 @@ export default function SmartLinksPage() {
     {
       id: '1',
       title: 'Producto destacado - Campaña Enero',
-      originalUrl: 'https://colombiatic.com/products/premium-package',
+      originalUrl: 'https://colombiatic.com.co/products/premium-package',
       smartUrl: 'https://clbt.ic/abc123',
       clicks: 1242,
       conversions: 42,
@@ -37,7 +37,7 @@ export default function SmartLinksPage() {
     {
       id: '2',
       title: 'Webinar Marketing Digital',
-      originalUrl: 'https://colombiatic.com/webinars/marketing-2026',
+      originalUrl: 'https://colombiatic.com.co/webinars/marketing-2026',
       smartUrl: 'https://clbt.ic/def456',
       clicks: 856,
       conversions: 28,
@@ -52,7 +52,7 @@ export default function SmartLinksPage() {
     {
       id: '3',
       title: 'Descarga Ebook SEO',
-      originalUrl: 'https://colombiatic.com/resources/seo-guide.pdf',
+      originalUrl: 'https://colombiatic.com.co/resources/seo-guide.pdf',
       smartUrl: 'https://clbt.ic/ghi789',
       clicks: 2103,
       conversions: 156,

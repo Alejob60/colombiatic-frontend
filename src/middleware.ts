@@ -20,8 +20,11 @@ export function middleware(request: NextRequest) {
   
   response.headers.set('Content-Security-Policy', cspHeader);
   
-  // Performance optimizations
-  response.headers.set('Cache-Control', 'public, max-age=31536000, immutable');
+  // HTML must never be cached immutably, otherwise a deploy never reaches visitors.
+  // Next.js already serves content-hashed files under /_next/static with a long
+  // immutable cache, so this middleware only has to protect the documents.
+  response.headers.set('Cache-Control', 'no-cache, no-store, must-revalidate');
+  response.headers.set('Pragma', 'no-cache');
   
   return response;
 }

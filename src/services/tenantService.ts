@@ -22,7 +22,7 @@ const REFERENCE_TENANT: TenantInfo = {
   name: 'test-tenant',
   plan: 'FREE',
   status: 'Active',
-  domain: 'test.colombiatic.com'
+  domain: 'test.colombiatic.com.co'
 };
 
 // El tenant se identifica por el host de la petición, así que si el backend no
@@ -82,7 +82,7 @@ export async function validateCurrentTenant(): Promise<TenantValidationResponse>
 
 /**
  * Validar un dominio de tenant explícito
- * @param domain Dominio a validar (ej. ejemplo.colombiatic.com)
+ * @param domain Dominio a validar (ej. ejemplo.colombiatic.com.co)
  */
 export async function validateTenantDomain(domain: string): Promise<TenantValidationResponse> {
   const normalizedDomain = domain.trim().toLowerCase();

@@ -15,7 +15,7 @@ export default function DomainManagement() {
   const [customDomain, setCustomDomain] = useState(website?.domain || '');
   const [dnsRecords, setDnsRecords] = useState([
     { type: 'A', name: '@', value: '192.0.2.1', status: 'pending' },
-    { type: 'CNAME', name: 'www', value: 'proxy.colombiatic.com', status: 'pending' }
+    { type: 'CNAME', name: 'www', value: 'proxy.colombiatic.com.co', status: 'pending' }
   ]);
 
   const handleVerifyDomain = async () => {

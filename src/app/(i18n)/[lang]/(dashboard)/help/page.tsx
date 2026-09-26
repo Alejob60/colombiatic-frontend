@@ -193,7 +193,7 @@ function HelpPage() {
                   <Mail className="w-5 h-5 text-primary" />
                   <div className="text-left">
                     <div className="text-white font-medium">Email</div>
-                    <div className="text-gray-400 text-sm">support@colombiatic.com</div>
+                    <div className="text-gray-400 text-sm">support@colombiatic.com.co</div>
                   </div>
                 </button>
               </div>

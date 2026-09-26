@@ -63,7 +63,7 @@ export default function TenantSelector() {
             value={domain}
             onChange={(e) => setDomain(e.target.value)}
             onKeyDown={handleKeyDown}
-            placeholder="ejemplo.colombiatic.com"
+            placeholder="ejemplo.colombiatic.com.co"
             className="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-2 text-white focus:ring-2 focus:ring-primary focus:border-transparent"
             disabled={loading}
           />

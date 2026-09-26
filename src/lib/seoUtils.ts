@@ -81,8 +81,8 @@ export function generateOrganizationSchema() {
       '@context': 'https://schema.org',
       '@type': 'Organization',
       name: 'ColombiaTIC Ingeniería SAS',
-      url: 'https://colombiatic.com',
-      logo: 'https://colombiatic.com/logo.png',
+      url: 'https://colombiatic.com.co',
+      logo: 'https://colombiatic.com.co/logo.png',
       sameAs: [
         'https://www.linkedin.com/company/colombiatic',
         'https://www.instagram.com/colombiatic',
@@ -99,10 +99,10 @@ export function generateWebsiteSchema() {
       '@context': 'https://schema.org',
       '@type': 'WebSite',
       name: 'ColombiaTIC',
-      url: 'https://colombiatic.com',
+      url: 'https://colombiatic.com.co',
       potentialAction: {
         '@type': 'SearchAction',
-        target: 'https://colombiatic.com/search?q={search_term_string}',
+        target: 'https://colombiatic.com.co/search?q={search_term_string}',
         'query-input': 'required name=search_term_string',
       },
     }),
@@ -136,7 +136,7 @@ export function generateArticleSchema(article: {
         name: 'ColombiaTIC Ingeniería SAS',
         logo: {
           '@type': 'ImageObject',
-          url: 'https://colombiatic.com/logo.png',
+          url: 'https://colombiatic.com.co/logo.png',
         },
       },
     }),

@@ -62,10 +62,10 @@ const IncidentPlaybook = () => {
   ];
 
   const teamMembers = [
-    { id: 1, name: 'Alex Johnson', role: 'DevOps Lead', phone: '+1 (555) 123-4567', email: 'alex.j@colombiatic.com' },
-    { id: 2, name: 'Maria Garcia', role: 'Security Officer', phone: '+1 (555) 234-5678', email: 'maria.g@colombiatic.com' },
-    { id: 3, name: 'David Chen', role: 'Database Admin', phone: '+1 (555) 345-6789', email: 'david.c@colombiatic.com' },
-    { id: 4, name: 'Sarah Williams', role: 'Support Manager', phone: '+1 (555) 456-7890', email: 'sarah.w@colombiatic.com' }
+    { id: 1, name: 'Alex Johnson', role: 'DevOps Lead', phone: '+1 (555) 123-4567', email: 'alex.j@colombiatic.com.co' },
+    { id: 2, name: 'Maria Garcia', role: 'Security Officer', phone: '+1 (555) 234-5678', email: 'maria.g@colombiatic.com.co' },
+    { id: 3, name: 'David Chen', role: 'Database Admin', phone: '+1 (555) 345-6789', email: 'david.c@colombiatic.com.co' },
+    { id: 4, name: 'Sarah Williams', role: 'Support Manager', phone: '+1 (555) 456-7890', email: 'sarah.w@colombiatic.com.co' }
   ];
 
   const handleStartPlaybook = (playbookId: string) => {

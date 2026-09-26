@@ -42,7 +42,7 @@ class WompiService {
         body: JSON.stringify({
           amount_in_cents: orderData.amount * 100, // Convert to cents
           currency: orderData.currency,
-          customer_email: 'customer@colombiatic.com', // This should come from user data
+          customer_email: 'customer@colombiatic.com.co', // This should come from user data
           payment_method: {
             type: 'NEQUI', // Default payment method
           },

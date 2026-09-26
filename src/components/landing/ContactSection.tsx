@@ -210,8 +210,8 @@ export default function ContactSection() {
                   </div>
                   <div className="ml-4">
                     <h4 className="text-lg font-semibold text-white">Email</h4>
-                    <p className="text-gray-400 mt-1">contacto@colombiatic.com</p>
-                    <p className="text-gray-400">soporte@colombiatic.com</p>
+                    <p className="text-gray-400 mt-1">contacto@colombiatic.com.co</p>
+                    <p className="text-gray-400">soporte@colombiatic.com.co</p>
                   </div>
                 </div>
                 

@@ -156,7 +156,7 @@ export default function ContactCTA() {
                 </div>
                 <div>
                   <h4 className="text-lg font-semibold mb-2">{t('contact.email') || 'Email'}</h4>
-                  <p className="text-gray-400">contacto@colombiatic.com</p>
+                  <p className="text-gray-400">contacto@colombiatic.com.co</p>
                   <p className="text-gray-500 text-sm mt-1">{t('contact.email_desc') || 'Soporte y consultas generales'}</p>
                 </div>
               </div>

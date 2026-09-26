@@ -12,7 +12,7 @@ export default function DNSVerifier() {
   const [isVerifying, setIsVerifying] = useState(false);
   const [verificationResults, setVerificationResults] = useState([
     { id: 1, record: 'A record', status: 'verified', detail: 'Points to 192.0.2.1' },
-    { id: 2, record: 'CNAME www', status: 'pending', detail: 'Points to proxy.colombiatic.com' },
+    { id: 2, record: 'CNAME www', status: 'pending', detail: 'Points to proxy.colombiatic.com.co' },
     { id: 3, record: 'TXT verification', status: 'error', detail: 'Missing TXT record' },
     { id: 4, record: 'SSL certificate', status: 'pending', detail: 'Awaiting DNS propagation' }
   ]);

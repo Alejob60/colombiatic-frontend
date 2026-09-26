@@ -91,7 +91,7 @@ export default function Footer() {
   };
 
   const contactInfo = {
-    email: 'contacto@colombiatic.com',
+    email: 'contacto@colombiatic.com.co',
     phone: '+57 300 123 4567',
     location: locale === 'es' ? 'Bogotá, Colombia' : 'Bogotá, Colombia'
   };
