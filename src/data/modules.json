@@ -1,0 +1,114 @@
+[
+  {
+    "id": "redes-contenido",
+    "name": "Módulo de Redes y Contenidos",
+    "description": "Programación de contenido y gestión de redes sociales tipo Metricool",
+    "type": "modulo",
+    "price_cop": 120000,
+    "billing_cycle": "mensual",
+    "features": [
+      "Programador de publicaciones",
+      "Inbox social unificado",
+      "Estadísticas en tiempo real",
+      "Reportes automáticos"
+    ],
+    "setup_time": "24 horas",
+    "category": "marketing"
+  },
+  {
+    "id": "automatizacion",
+    "name": "Módulo de Automatización Avanzada",
+    "description": "Automatización de procesos tipo Kommo Salesbot",
+    "type": "modulo",
+    "price_cop": 90000,
+    "billing_cycle": "mensual",
+    "features": [
+      "Flujos de automatización",
+      "Disparadores inteligentes",
+      "Integración con CRM",
+      "Notificaciones automáticas"
+    ],
+    "setup_time": "24 horas",
+    "category": "automatizacion"
+  },
+  {
+    "id": "dashboard-analitico",
+    "name": "Dashboard Analítico Comercial",
+    "description": "Panel de control con métricas avanzadas de negocio",
+    "type": "modulo",
+    "price_cop": 60000,
+    "billing_cycle": "mensual",
+    "features": [
+      "Métricas personalizables",
+      "Gráficos interactivos",
+      "Exportación de datos",
+      "Alertas inteligentes"
+    ],
+    "setup_time": "12 horas",
+    "category": "analitica"
+  },
+  {
+    "id": "embudo-visual",
+    "name": "Embudo Visual (Pipeline estilo Kommo)",
+    "description": "Gestión visual de oportunidades de venta",
+    "type": "modulo",
+    "price_cop": 80000,
+    "billing_cycle": "mensual",
+    "features": [
+      "Pipeline arrastrar/soltar",
+      "Etapa personalizable",
+      "Asignación automática",
+      "Seguimiento de tareas"
+    ],
+    "setup_time": "24 horas",
+    "category": "ventas"
+  },
+  {
+    "id": "email-marketing",
+    "name": "Email Marketing Automatizado",
+    "description": "Campañas de email marketing automatizadas",
+    "type": "modulo",
+    "price_cop": 60000,
+    "billing_cycle": "mensual",
+    "features": [
+      "Plantillas personalizables",
+      "Segmentación avanzada",
+      "Automatizaciones por eventos",
+      "Analítica de apertura"
+    ],
+    "setup_time": "12 horas",
+    "category": "marketing"
+  },
+  {
+    "id": "refactor-pro",
+    "name": "Refactor Pro de Sitios Web",
+    "description": "Modernización y optimización de sitios web existentes",
+    "type": "subproducto",
+    "price_cop": 350000,
+    "billing_cycle": "único",
+    "features": [
+      "Rediseño moderno",
+      "Optimización SEO",
+      "Mejora de performance",
+      "Compatibilidad mobile"
+    ],
+    "setup_time": "72 horas",
+    "category": "web"
+  },
+  {
+    "id": "consultoria-estrategica",
+    "name": "Consultoría Estratégica y Optimización del Modelo de Negocio",
+    "description": "Asesoría experta para maximizar el impacto de la IA en tu negocio",
+    "type": "subproducto",
+    "price_cop": 650000,
+    "billing_cycle": "único",
+    "features": [
+      "Diagnóstico digital",
+      "Plan de transformación",
+      "Capacitación personalizada",
+      "Seguimiento trimestral"
+    ],
+    "setup_time": "120 horas",
+    "category": "consultoria"
+  }
+]

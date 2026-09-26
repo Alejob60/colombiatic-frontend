@@ -1,74 +1,43 @@
 // src/components/sections/HeroSection.tsx
-"use client";
+'use client';
 
-import Image from "next/image";
-import { motion } from "framer-motion";
+import { ArrowRight } from 'lucide-react';
 
 export default function HeroSection() {
   return (
-    <section className="relative w-full min-h-screen flex items-center justify-center text-white bg-black overflow-hidden">
-      {/* Imagen de fondo con overlay */}
-      <Image
-        src="/assets/hero-code.png"
-        alt="Fondo de código"
-        fill
-        className="object-cover opacity-10 pointer-events-none z-0"
-        priority
-      />
+    <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden bg-[#0C1116] px-4">
+      <div className="absolute inset-0 z-0">
+        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-[#5EA0FF]/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-1/3 right-1/4 w-96 h-96 bg-[#3BA5FF]/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+      </div>
 
-      <motion.div
-        className="max-w-4xl px-6 text-center relative z-10"
-        initial={{ opacity: 0, y: 40 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1.2, ease: "easeOut" }}
-      >
-        <motion.h1
-          className="text-4xl sm:text-6xl font-bold tracking-tight leading-tight font-sans"
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
-        >
-          IA, Innovación y Tecnología
-        </motion.h1>
-
-        <motion.p
-          className="mt-6 text-lg text-gray-300"
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4 }}
-        >
-          Aliados en el diseño y ejecución de soluciones tecnológicas inteligentes.
-          <br />
-          Transformamos empresas, gobierno y defensa con tecnología desarrollada en Colombia.
-        </motion.p>
-
-        <motion.div
-          className="mt-8 flex justify-center gap-4 flex-wrap"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.6 }}
-        >
-         <div className="mt-10 flex justify-center flex-wrap gap-4">
-          {/* Botón: Ir a la sección de contacto */}
-          <a
-            href="#contacto"
-            className="relative inline-flex items-center justify-center px-6 py-3 text-white font-medium text-sm rounded-lg bg-blue-600 hover:bg-blue-700 transition duration-300 group overflow-hidden"
-          >
-            <span className="absolute inset-0 w-full h-full bg-blue-700 scale-0 group-hover:scale-100 transition-transform duration-300 origin-center opacity-20"></span>
-            <span className="relative z-10">Contáctanos</span>
-          </a>
-
-          {/* Botón: Ir a la sección de servicios */}
-          <a
-            href="#servicios"
-            className="relative inline-flex items-center justify-center px-6 py-3 border border-white text-white font-medium text-sm rounded-lg hover:bg-white hover:text-black transition duration-300 group overflow-hidden"
-          >
-            <span className="absolute inset-0 w-full h-full bg-white scale-0 group-hover:scale-100 transition-transform duration-300 origin-center opacity-20"></span>
-            <span className="relative z-10">Ver Servicios</span>
-          </a>
+      <div className="relative w-full max-w-6xl mx-auto z-10">
+        <div className="text-center">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight mb-6">
+            <span className="block bg-clip-text text-transparent bg-gradient-to-r from-[#E6EDF3] to-[#A9B8C6]">
+              Transforma tu negocio
+            </span>
+            <span className="block bg-clip-text text-transparent bg-gradient-to-r from-[#5EA0FF] to-[#3BA5FF] mt-3">
+              con IA empresarial
+            </span>
+          </h1>
+          
+          <p className="mt-6 max-w-3xl mx-auto text-lg sm:text-xl md:text-2xl text-[#A3B4C8] mb-10">
+            Automatiza procesos, aumenta ventas y reduce esfuerzo operativo con nuestra plataforma de inteligencia artificial.
+          </p>
+          
+          <div className="flex flex-col sm:flex-row justify-center gap-4">
+            <button className="px-8 py-4 bg-gradient-to-r from-[#1E90FF] to-[#3BA5FF] text-white font-bold rounded-xl transition-all duration-300 flex items-center justify-center group hover:from-[#3BA5FF] hover:to-[#1E90FF]">
+              Comenzar ahora
+              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+            </button>
+            
+            <button className="px-8 py-4 bg-transparent border border-[rgba(255,255,255,0.1)] text-[#E6EDF3] font-bold rounded-xl transition-all duration-300 hover:bg-[rgba(255,255,255,0.05)]">
+              Ver demo
+            </button>
+          </div>
         </div>
-        </motion.div>
-      </motion.div>
+      </div>
     </section>
   );
 }

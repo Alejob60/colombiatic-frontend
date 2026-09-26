@@ -1,0 +1,196 @@
+{
+  "categories": [
+    {
+      "id": "digital_presence",
+      "name": "Presencia Digital Inteligente",
+      "description": "Servicios orientados a crear, optimizar y potenciar la presencia digital del negocio.",
+      "icon": "Globe",
+      "gradient": "from-blue-500 to-cyan-500",
+      "services": [
+        {
+          "id": "landing_page",
+          "name": "Landing Page de Alto Rendimiento",
+          "description": "Página optimizada para conversiones, lista en 48 horas.",
+          "active": false,
+          "actions": ["activar", "desactivar", "configurar", "ver_docs", "asignar_plan", "probar", "metricas"]
+        },
+        {
+          "id": "website_modern",
+          "name": "Sitio Web Modernizado",
+          "description": "Sitio web corporativo con velocidad optimizada y diseño premium.",
+          "active": false,
+          "actions": ["activar", "desactivar", "configurar", "ver_docs", "asignar_plan", "metricas"]
+        },
+        {
+          "id": "adn_web",
+          "name": "ADN Web",
+          "description": "Auditoría técnica automatizada SEO + Core Web Vitals.",
+          "active": false,
+          "actions": ["activar", "desactivar", "ver_docs", "probar", "metricas"]
+        },
+        {
+          "id": "wap_subdomain",
+          "name": "Subdominio WAP",
+          "description": "Versión móvil rápida del negocio para navegación tipo app.",
+          "active": false,
+          "actions": ["activar", "desactivar", "configurar", "ver_docs"]
+        }
+      ]
+    },
+    {
+      "id": "automation_ai",
+      "name": "Automatización & IA Comercial",
+      "description": "Inteligencia artificial conectada a ventas, embudos, personalización y automatización continua.",
+      "icon": "Bot",
+      "gradient": "from-purple-500 to-pink-500",
+      "services": [
+        {
+          "id": "misybot_ai",
+          "name": "Misybot AI",
+          "description": "IA omnicanal híbrida para ventas, soporte y automatización.",
+          "active": false,
+          "actions": ["activar", "desactivar", "configurar", "integrar", "ver_docs", "metricas"]
+        },
+        {
+          "id": "sales_flows",
+          "name": "Flujos Automáticos de Ventas",
+          "description": "Automatización avanzada conectada al funnel comercial.",
+          "active": false,
+          "actions": ["activar", "desactivar", "configurar", "ver_docs", "metricas"]
+        },
+        {
+          "id": "twin_ai",
+          "name": "Twin AI",
+          "description": "Motor de memoria inteligente que personaliza interacciones usuario a usuario.",
+          "active": false,
+          "actions": ["activar", "desactivar", "configurar", "ver_docs", "metricas"]
+        },
+        {
+          "id": "recommender_engine",
+          "name": "Motor de Recomendación",
+          "description": "Recomendaciones basadas en perfil, compras e intención del cliente.",
+          "active": false,
+          "actions": ["activar", "desactivar", "configurar", "metricas"]
+        },
+        {
+          "id": "post_ads_funnel",
+          "name": "Embudo Post-Anuncio con IA",
+          "description": "Secuencias automáticas para convertir leads de campañas.",
+          "active": false,
+          "actions": ["activar", "desactivar", "configurar", "ver_docs"]
+        },
+        {
+          "id": "cart_recovery",
+          "name": "Recuperación de Carritos",
+          "description": "Seguimiento automático para ventas abandonadas.",
+          "active": false,
+          "actions": ["activar", "desactivar", "configurar", "probar", "metricas"]
+        }
+      ]
+    },
+    {
+      "id": "omnicanal",
+      "name": "Comunicaciones Omnicanal",
+      "description": "Servicios centralizados de email, SMS, voz y dashboard unificado.",
+      "icon": "MessageSquare",
+      "gradient": "from-green-500 to-emerald-500",
+      "services": [
+        {
+          "id": "email_marketing",
+          "name": "Email Marketing",
+          "description": "Envíos automatizados para ventas, soporte y remarketing.",
+          "active": false,
+          "actions": ["activar", "desactivar", "configurar", "probar", "metricas"]
+        },
+        {
+          "id": "sms_service",
+          "name": "SMS Transaccional y Promocional",
+          "description": "Envíos automáticos a clientes con alta tasa de apertura.",
+          "active": false,
+          "actions": ["activar", "desactivar", "configurar", "probar"]
+        },
+        {
+          "id": "voice_service",
+          "name": "Llamadas Automáticas (voz v2)",
+          "description": "Llamadas automáticas y notificaciones por voz.",
+          "active": false,
+          "actions": ["activar", "desactivar", "configurar"]
+        },
+        {
+          "id": "unified_dashboard",
+          "name": "Dashboard Unificado",
+          "description": "Visión completa del negocio: ventas, atención, IA y rendimiento.",
+          "active": true,
+          "actions": ["configurar", "ver_docs", "metricas"]
+        }
+      ]
+    },
+    {
+      "id": "ecommerce_integrations",
+      "name": "E-commerce & Integraciones",
+      "description": "Conexiones con Shopify, WooCommerce, catálogos e inventarios.",
+      "icon": "ShoppingCart",
+      "gradient": "from-orange-500 to-red-500",
+      "services": [
+        {
+          "id": "shopify_integration",
+          "name": "Integración Shopify",
+          "description": "Sincronización completa con productos, inventarios y análisis.",
+          "active": false,
+          "actions": ["activar", "desactivar", "integrar", "ver_docs", "metricas"]
+        },
+        {
+          "id": "woocommerce_integration",
+          "name": "Integración WooCommerce",
+          "description": "Conexión automática con la tienda para ventas e inventarios.",
+          "active": false,
+          "actions": ["activar", "desactivar", "integrar", "ver_docs"]
+        },
+        {
+          "id": "social_catalog_sync",
+          "name": "Sincronización con Redes Sociales",
+          "description": "Catálogos automáticos en Instagram, Facebook y Google Shopping.",
+          "active": false,
+          "actions": ["activar", "desactivar", "configurar", "probar"]
+        },
+        {
+          "id": "inventory_automation",
+          "name": "Inventario Automático",
+          "description": "Actualización continua del inventario en todos los canales.",
+          "active": false,
+          "actions": ["activar", "desactivar", "metricas"]
+        }
+      ]
+    },
+    {
+      "id": "marketing_content",
+      "name": "Marketing & Contenido",
+      "description": "Creación automática de contenido, publicaciones y analíticas sociales.",
+      "icon": "TrendingUp",
+      "gradient": "from-yellow-500 to-amber-500",
+      "services": [
+        {
+          "id": "auto_publisher",
+          "name": "Publicador Automático",
+          "description": "Publicación programada en múltiples redes sociales.",
+          "active": false,
+          "actions": ["activar", "desactivar", "configurar", "ver_docs"]
+        },
+        {
+          "id": "social_analytics",
+          "name": "Analíticas Sociales",
+          "description": "Datos avanzados de interacción, crecimiento y alcance.",
+          "active": false,
+          "actions": ["activar", "desactivar", "metricas"]
+        },
+        {
+          "id": "smart_widgets",
+          "name": "Widgets Inteligentes",
+          "description": "Componentes embebibles que aumentan conversión y experiencia.",
+          "active": false,
+          "actions": ["activar", "desactivar", "configurar", "probar"]
+        }
+      ]
+    }
+  ]
+}

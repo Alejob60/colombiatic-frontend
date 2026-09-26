@@ -1,0 +1,347 @@
+/* Sistema de Tipografía para ColombiaTIC */
+:root {
+  /* Font families */
+  --font-primary: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  --font-secondary: 'Geist Mono', monospace;
+  
+  /* Font sizes */
+  --text-xs: 0.75rem;    /* 12px */
+  --text-sm: 0.875rem;   /* 14px */
+  --text-base: 1rem;      /* 16px */
+  --text-lg: 1.125rem;   /* 18px */
+  --text-xl: 1.25rem;    /* 20px */
+  --text-2xl: 1.5rem;    /* 24px */
+  --text-3xl: 1.875rem;  /* 30px */
+  --text-4xl: 2.25rem;   /* 36px */
+  --text-5xl: 3rem;      /* 48px */
+  --text-6xl: 3.75rem;   /* 60px */
+  --text-7xl: 4.5rem;    /* 72px */
+  
+  /* Line heights */
+  --leading-tight: 1.25;
+  --leading-snug: 1.375;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.625;
+  --leading-loose: 2;
+  
+  /* Font weights */
+  --font-thin: 100;
+  --font-extralight: 200;
+  --font-light: 300;
+  --font-normal: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+  --font-extrabold: 800;
+  --font-black: 900;
+}
+
+/* Text sizes */
+.text-xs {
+  font-size: var(--text-xs);
+  line-height: var(--leading-normal);
+}
+
+.text-sm {
+  font-size: var(--text-sm);
+  line-height: var(--leading-normal);
+}
+
+.text-base {
+  font-size: var(--text-base);
+  line-height: var(--leading-normal);
+}
+
+.text-lg {
+  font-size: var(--text-lg);
+  line-height: var(--leading-normal);
+}
+
+.text-xl {
+  font-size: var(--text-xl);
+  line-height: var(--leading-tight);
+}
+
+.text-2xl {
+  font-size: var(--text-2xl);
+  line-height: var(--leading-tight);
+}
+
+.text-3xl {
+  font-size: var(--text-3xl);
+  line-height: var(--leading-tight);
+}
+
+.text-4xl {
+  font-size: var(--text-4xl);
+  line-height: var(--leading-tight);
+}
+
+.text-5xl {
+  font-size: var(--text-5xl);
+  line-height: var(--leading-tight);
+}
+
+.text-6xl {
+  font-size: var(--text-6xl);
+  line-height: var(--leading-tight);
+}
+
+.text-7xl {
+  font-size: var(--text-7xl);
+  line-height: var(--leading-tight);
+}
+
+/* Font weights */
+.font-thin {
+  font-weight: var(--font-thin);
+}
+
+.font-extralight {
+  font-weight: var(--font-extralight);
+}
+
+.font-light {
+  font-weight: var(--font-light);
+}
+
+.font-normal {
+  font-weight: var(--font-normal);
+}
+
+.font-medium {
+  font-weight: var(--font-medium);
+}
+
+.font-semibold {
+  font-weight: var(--font-semibold);
+}
+
+.font-bold {
+  font-weight: var(--font-bold);
+}
+
+.font-extrabold {
+  font-weight: var(--font-extrabold);
+}
+
+.font-black {
+  font-weight: var(--font-black);
+}
+
+/* Responsive typography */
+@media (min-width: 640px) {
+  .sm\:text-xs {
+    font-size: var(--text-xs);
+  }
+  
+  .sm\:text-sm {
+    font-size: var(--text-sm);
+  }
+  
+  .sm\:text-base {
+    font-size: var(--text-base);
+  }
+  
+  .sm\:text-lg {
+    font-size: var(--text-lg);
+  }
+  
+  .sm\:text-xl {
+    font-size: var(--text-xl);
+  }
+  
+  .sm\:text-2xl {
+    font-size: var(--text-2xl);
+  }
+  
+  .sm\:text-3xl {
+    font-size: var(--text-3xl);
+  }
+  
+  .sm\:text-4xl {
+    font-size: var(--text-4xl);
+  }
+  
+  .sm\:text-5xl {
+    font-size: var(--text-5xl);
+  }
+}
+
+@media (min-width: 768px) {
+  .md\:text-xs {
+    font-size: var(--text-xs);
+  }
+  
+  .md\:text-sm {
+    font-size: var(--text-sm);
+  }
+  
+  .md\:text-base {
+    font-size: var(--text-base);
+  }
+  
+  .md\:text-lg {
+    font-size: var(--text-lg);
+  }
+  
+  .md\:text-xl {
+    font-size: var(--text-xl);
+  }
+  
+  .md\:text-2xl {
+    font-size: var(--text-2xl);
+  }
+  
+  .md\:text-3xl {
+    font-size: var(--text-3xl);
+  }
+  
+  .md\:text-4xl {
+    font-size: var(--text-4xl);
+  }
+  
+  .md\:text-5xl {
+    font-size: var(--text-5xl);
+  }
+  
+  .md\:text-6xl {
+    font-size: var(--text-6xl);
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:text-xs {
+    font-size: var(--text-xs);
+  }
+  
+  .lg\:text-sm {
+    font-size: var(--text-sm);
+  }
+  
+  .lg\:text-base {
+    font-size: var(--text-base);
+  }
+  
+  .lg\:text-lg {
+    font-size: var(--text-lg);
+  }
+  
+  .lg\:text-xl {
+    font-size: var(--text-xl);
+  }
+  
+  .lg\:text-2xl {
+    font-size: var(--text-2xl);
+  }
+  
+  .lg\:text-3xl {
+    font-size: var(--text-3xl);
+  }
+  
+  .lg\:text-4xl {
+    font-size: var(--text-4xl);
+  }
+  
+  .lg\:text-5xl {
+    font-size: var(--text-5xl);
+  }
+  
+  .lg\:text-6xl {
+    font-size: var(--text-6xl);
+  }
+  
+  .lg\:text-7xl {
+    font-size: var(--text-7xl);
+  }
+}
+
+/* Heading styles */
+h1, .h1 {
+  font-size: var(--text-4xl);
+  font-weight: var(--font-bold);
+  line-height: var(--leading-tight);
+  letter-spacing: -0.02em;
+}
+
+h2, .h2 {
+  font-size: var(--text-3xl);
+  font-weight: var(--font-bold);
+  line-height: var(--leading-tight);
+  letter-spacing: -0.01em;
+}
+
+h3, .h3 {
+  font-size: var(--text-2xl);
+  font-weight: var(--font-bold);
+  line-height: var(--leading-snug);
+}
+
+h4, .h4 {
+  font-size: var(--text-xl);
+  font-weight: var(--font-bold);
+  line-height: var(--leading-normal);
+}
+
+h5, .h5 {
+  font-size: var(--text-lg);
+  font-weight: var(--font-semibold);
+  line-height: var(--leading-normal);
+}
+
+h6, .h6 {
+  font-size: var(--text-base);
+  font-weight: var(--font-semibold);
+  line-height: var(--leading-normal);
+}
+
+@media (min-width: 768px) {
+  h1, .h1 {
+    font-size: var(--text-5xl);
+  }
+  
+  h2, .h2 {
+    font-size: var(--text-4xl);
+  }
+  
+  h3, .h3 {
+    font-size: var(--text-3xl);
+  }
+  
+  h4, .h4 {
+    font-size: var(--text-2xl);
+  }
+}
+
+/* Utility classes for spacing */
+.leading-tight {
+  line-height: var(--leading-tight);
+}
+
+.leading-snug {
+  line-height: var(--leading-snug);
+}
+
+.leading-normal {
+  line-height: var(--leading-normal);
+}
+
+.leading-relaxed {
+  line-height: var(--leading-relaxed);
+}
+
+.leading-loose {
+  line-height: var(--leading-loose);
+}
+
+.tracking-tight {
+  letter-spacing: -0.025em;
+}
+
+.tracking-normal {
+  letter-spacing: 0;
+}
+
+.tracking-wide {
+  letter-spacing: 0.025em;
+}

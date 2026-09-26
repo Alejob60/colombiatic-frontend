@@ -5,8 +5,8 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 
 const partners = [
-  { src: '/partners/openai4.png', alt: 'OpenAI' },
   { src: '/partners/Microsoft3.png', alt: 'Microsoft' },
+  { src: '/partners/NVIDIA.png', alt: 'NVIDIA' },
   { src: '/partners/Azure.png', alt: 'Azure' },
 ];
 

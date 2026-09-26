@@ -1,0 +1,403 @@
+[
+  {
+    "id": "landing_page",
+    "name": "Landing Page de Alto Rendimiento",
+    "description": "Página de aterrizaje moderna, optimizada para conversión y diseñada para captar clientes rápidamente.",
+    "shortDescription": "Diseño premium, optimizada SEO, enfocada en ventas",
+    "benefits": ["rápida implementación", "diseño premium", "optimizada SEO", "enfocada en ventas"],
+    "priceRange": {
+      "min": 350000,
+      "max": 580000,
+      "currency": "COP"
+    },
+    "category": "web",
+    "categoryId": 1,
+    "subcategory": "Sitios Web y Presencia Digital",
+    "features": [
+      "Diseño responsive moderno",
+      "Optimización SEO básica",
+      "Formulario de contacto",
+      "Integración con redes sociales",
+      "Hosting básico incluido"
+    ]
+  },
+  {
+    "id": "modern_website",
+    "name": "Sitio Web Corporativo Modernizado",
+    "description": "Página web completa, moderna, adaptable a móviles y optimizada para posicionamiento.",
+    "shortDescription": "Sitio web completo, moderno y optimizado",
+    "benefits": ["hasta 5 secciones", "hosting", "seguridad básica", "SEO técnico"],
+    "priceRange": {
+      "min": 650000,
+      "max": 1200000,
+      "currency": "COP"
+    },
+    "category": "web",
+    "categoryId": 1,
+    "subcategory": "Sitios Web y Presencia Digital",
+    "features": [
+      "Diseño responsive premium",
+      "Hasta 5 secciones personalizadas",
+      "Optimización SEO avanzada",
+      "Seguridad SSL incluida",
+      "Formularios de contacto múltiples",
+      "Integración con Google Analytics",
+      "Hosting y dominio por 1 año"
+    ],
+    "includes": ["hasta 5 secciones", "hosting", "seguridad básica", "SEO técnico"]
+  },
+  {
+    "id": "ecommerce_basic",
+    "name": "Tienda Virtual Básica",
+    "description": "E-commerce funcional con carrito, pagos online y administración simple.",
+    "shortDescription": "Tienda online funcional con carrito y pagos",
+    "benefits": ["Shopify o WooCommerce", "pasarelas", "catálogo inicial"],
+    "priceRange": {
+      "min": 850000,
+      "max": 1500000,
+      "currency": "COP"
+    },
+    "category": "ecommerce",
+    "categoryId": 1,
+    "subcategory": "Sitios Web y Presencia Digital",
+    "features": [
+      "Plataforma eCommerce (Shopify/WooCommerce)",
+      "Carrito de compras funcional",
+      "Pasarelas de pago integradas",
+      "Panel de administración",
+      "Catálogo inicial (hasta 20 productos)",
+      "Diseño responsive",
+      "SSL gratuito",
+      "Hosting básico por 1 año"
+    ],
+    "includes": ["Shopify o WooCommerce", "pasarelas", "catálogo inicial"]
+  },
+  {
+    "id": "shopify_woocommerce_pro",
+    "name": "Integración E-commerce Profesional",
+    "description": "Integración avanzada entre tienda, inventarios, CRM y automatizaciones.",
+    "shortDescription": "Integración avanzada de sistemas e-commerce",
+    "benefits": ["sincronización inventarios", "reportes", "embudos de venta"],
+    "priceRange": {
+      "min": 1200000,
+      "max": 2500000,
+      "currency": "COP"
+    },
+    "category": "ecommerce",
+    "categoryId": 1,
+    "subcategory": "Sitios Web y Presencia Digital",
+    "features": [
+      "Sincronización de inventarios en tiempo real",
+      "Integración con CRM",
+      "Embudos de venta automatizados",
+      "Reportes avanzados",
+      "Notificaciones automáticas",
+      "Gestión de pedidos centralizada",
+      "Personalización avanzada",
+      "Soporte técnico prioritario"
+    ],
+    "includes": ["sincronización inventarios", "reportes", "embudos de venta"]
+  },
+  {
+    "id": "ia_omnicanal",
+    "name": "Chatbot con IA Omnicanal",
+    "description": "Atención automática en WhatsApp, Instagram, Web, SMS y Messenger usando IA avanzada.",
+    "shortDescription": "Atención automática en múltiples canales con IA",
+    "benefits": ["flujo básico", "IA integrada", "reportes", "entrenamiento inicial"],
+    "priceRange": {
+      "min": 340000,
+      "max": 900000,
+      "currency": "COP"
+    },
+    "category": "ia",
+    "categoryId": 2,
+    "subcategory": "Automatización, IA y Omnicanal",
+    "features": [
+      "Atención en WhatsApp, Instagram, Web",
+      "Respuestas automatizadas 24/7",
+      "Inteligencia artificial avanzada",
+      "Reportes de conversaciones",
+      "Entrenamiento inicial del bot",
+      "Integración con CRM",
+      "Respuestas personalizadas",
+      "Transferencia a humano cuando sea necesario"
+    ],
+    "includes": ["flujo básico", "IA integrada", "reportes", "entrenamiento inicial"]
+  },
+  {
+    "id": "ventas_auto",
+    "name": "Embudo Automático de Ventas",
+    "description": "Sistema de ventas automático que contacta leads, envía seguimientos y recupera carritos.",
+    "shortDescription": "Sistema automático de ventas y recuperación",
+    "benefits": ["campañas", "mensajes", "automatizaciones", "reportes"],
+    "priceRange": {
+      "min": 350000,
+      "max": 1200000,
+      "currency": "COP"
+    },
+    "category": "automation",
+    "categoryId": 2,
+    "subcategory": "Automatización, IA y Omnicanal",
+    "features": [
+      "Embudo de ventas automatizado",
+      "Secuencias de mensajes personalizadas",
+      "Recuperación de carritos abandonados",
+      "Segmentación de audiencia",
+      "Reportes de conversión",
+      "Integración con email marketing",
+      "Seguimiento de leads",
+      "Notificaciones en tiempo real"
+    ],
+    "includes": ["campañas", "mensajes", "automatizaciones", "reportes"]
+  },
+  {
+    "id": "marketing_automation",
+    "name": "Automatización de Marketing Multicanal",
+    "description": "Configuración de automatizaciones completas en Email, WhatsApp, SMS y Web con IA.",
+    "shortDescription": "Automatización completa de marketing multicanal",
+    "benefits": [],
+    "priceRange": {
+      "min": 500000,
+      "max": 1800000,
+      "currency": "COP"
+    },
+    "category": "automation",
+    "categoryId": 2,
+    "subcategory": "Automatización, IA y Omnicanal",
+    "features": [
+      "Automatización en Email, WhatsApp, SMS",
+      "Personalización con IA",
+      "Segmentación avanzada",
+      "Reportes de ROI",
+      "Integración con redes sociales",
+      "Campañas programadas",
+      "A/B testing",
+      "Analítica avanzada"
+    ]
+  },
+  {
+    "id": "meta_agent_integration",
+    "name": "Meta-Agente Integrado en tu Sitio Web",
+    "description": "Implementación del asesor inteligente en páginas Web o Tiendas para atención 24/7.",
+    "shortDescription": "Asesor inteligente integrado 24/7",
+    "benefits": [],
+    "priceRange": {
+      "min": 450000,
+      "max": 700000,
+      "currency": "COP"
+    },
+    "category": "ia",
+    "categoryId": 2,
+    "subcategory": "Automatización, IA y Omnicanal",
+    "features": [
+      "Asistente virtual inteligente",
+      "Atención 24/7",
+      "Integración con sitio web",
+      "Respuestas personalizadas",
+      "Integración con base de conocimiento",
+      "Reportes de interacción",
+      "Capacitación continua",
+      "Personalización por perfil de usuario"
+    ]
+  },
+  {
+    "id": "brand_kit",
+    "name": "Kit de Marca Profesional",
+    "description": "Identidad visual completa: logo, colores, tipografía, piezas iniciales para negocio.",
+    "shortDescription": "Identidad visual completa para tu marca",
+    "benefits": [],
+    "priceRange": {
+      "min": 350000,
+      "max": 900000,
+      "currency": "COP"
+    },
+    "category": "branding",
+    "categoryId": 3,
+    "subcategory": "Servicios de Imagen, Contenido y Publicidad",
+    "features": [
+      "Logo principal y alternativo",
+      "Paleta de colores",
+      "Tipografía corporativa",
+      "Manual de marca básico",
+      "Piezas iniciales (tarjeta, firma, social media kit)",
+      "Formatos para impresión y digital",
+      "Versiones en diferentes formatos",
+      "Guía de uso básico"
+    ]
+  },
+  {
+    "id": "content_pack",
+    "name": "Pack de Contenidos Mensual",
+    "description": "20–40 artes o piezas para redes con copy profesional y adaptación IA.",
+    "shortDescription": "Contenido profesional para redes sociales",
+    "benefits": [],
+    "priceRange": {
+      "min": 300000,
+      "max": 850000,
+      "currency": "COP"
+    },
+    "category": "content",
+    "categoryId": 3,
+    "subcategory": "Servicios de Imagen, Contenido y Publicidad",
+    "features": [
+      "20-40 piezas de contenido mensual",
+      "Copywriting profesional",
+      "Adaptación con IA",
+      "Diseño gráfico incluido",
+      "Contenido para Instagram, Facebook, LinkedIn",
+      "Calendario editorial",
+      "Hashtags y etiquetas",
+      "Optimización para cada red social"
+    ]
+  },
+  {
+    "id": "ads_digital",
+    "name": "Campañas de Publicidad Digital",
+    "description": "Configuración y optimización de campañas en Facebook, Instagram y Google.",
+    "shortDescription": "Campañas publicitarias en redes y Google",
+    "benefits": [],
+    "priceRange": {
+      "min": 400000,
+      "max": 2000000,
+      "currency": "COP"
+    },
+    "category": "ads",
+    "categoryId": 3,
+    "subcategory": "Servicios de Imagen, Contenido y Publicidad",
+    "features": [
+      "Configuración de campañas en Facebook/Instagram",
+      "Campañas en Google Ads",
+      "Optimización continua",
+      "Reportes semanales",
+      "Segmentación avanzada",
+      "A/B testing de anuncios",
+      "Remarketing",
+      "ROI tracking"
+    ]
+  },
+  {
+    "id": "digital_audit",
+    "name": "Auditoría Digital Completa",
+    "description": "Análisis técnico y estratégico de web, funnel, SEO, campañas y datos del negocio.",
+    "shortDescription": "Análisis completo de tu presencia digital",
+    "benefits": [],
+    "priceRange": {
+      "min": 400000,
+      "max": 1100000,
+      "currency": "COP"
+    },
+    "category": "consulting",
+    "categoryId": 4,
+    "subcategory": "Servicios Avanzados & Empresariales",
+    "features": [
+      "Análisis técnico de sitio web",
+      "Auditoría SEO completa",
+      "Revisión de funnels de conversión",
+      "Análisis de campañas publicitarias",
+      "Evaluación de presencia en redes",
+      "Informe detallado con hallazgos",
+      "Recomendaciones prioritarias",
+      "Plan de acción a 30 días"
+    ]
+  },
+  {
+    "id": "cloud_infra",
+    "name": "Infraestructura en la Nube",
+    "description": "Configuración cloud (Azure/AWS) para despliegue profesional, seguridad y escalabilidad.",
+    "shortDescription": "Infraestructura cloud profesional y segura",
+    "benefits": [],
+    "priceRange": {
+      "min": 900000,
+      "max": 0,
+      "currency": "COP"
+    },
+    "category": "cloud",
+    "categoryId": 4,
+    "subcategory": "Servicios Avanzados & Empresariales",
+    "features": [
+      "Configuración en Azure o AWS",
+      "Arquitectura escalable",
+      "Seguridad empresarial",
+      "Monitoreo continuo",
+      "Backups automatizados",
+      "Balanceo de carga",
+      "CDN para mejor rendimiento",
+      "Soporte técnico 24/7"
+    ]
+  },
+  {
+    "id": "misybot_omnicanal",
+    "name": "Misybot Omnicanal IA",
+    "description": "Plataforma completa de monitoreo, campañas, corrección automática e IA integrada.",
+    "shortDescription": "Plataforma omnicanal con IA avanzada",
+    "benefits": [],
+    "priceRange": {
+      "min": 450000,
+      "max": 1800000,
+      "currency": "COP"
+    },
+    "category": "ia",
+    "categoryId": 5,
+    "subcategory": "Servicios Misybot / RealCulture",
+    "features": [
+      "Monitoreo omnicanal",
+      "Campañas automatizadas",
+      "Corrección automática",
+      "IA integrada avanzada",
+      "Reportes en tiempo real",
+      "Integración con múltiples plataformas",
+      "Personalización por cliente",
+      "Analítica predictiva"
+    ]
+  },
+  {
+    "id": "seo_speed_fix",
+    "name": "Optimización SEO y Velocidad",
+    "description": "Mejoras técnicas, carga, SEO, Core Web Vitals y conversión.",
+    "shortDescription": "Optimización técnica de SEO y velocidad",
+    "benefits": [],
+    "priceRange": {
+      "min": 250000,
+      "max": 600000,
+      "currency": "COP"
+    },
+    "category": "web",
+    "categoryId": 6,
+    "subcategory": "Servicios Complementarios",
+    "features": [
+      "Optimización de velocidad de carga",
+      "Mejoras de Core Web Vitals",
+      "Optimización SEO técnica",
+      "Compresión de imágenes",
+      "Minificación de código",
+      "Caché optimizado",
+      "Mobile-first indexing",
+      "Reporte de mejoras"
+    ]
+  },
+  {
+    "id": "api_integration",
+    "name": "Integración API a la Medida",
+    "description": "Conexión entre tu web o sistema y plataformas externas (pagos, envío, CRM).",
+    "shortDescription": "Integración personalizada con APIs externas",
+    "benefits": [],
+    "priceRange": {
+      "min": 500000,
+      "max": 0,
+      "currency": "COP"
+    },
+    "category": "integrations",
+    "categoryId": 6,
+    "subcategory": "Servicios Complementarios",
+    "features": [
+      "Integración con APIs externas",
+      "Conexión con pasarelas de pago",
+      "Sincronización con CRM",
+      "Integración con sistemas de envío",
+      "Personalización por requerimientos",
+      "Documentación técnica",
+      "Pruebas de integración",
+      "Soporte post-implementación"
+    ]
+  }
+]

@@ -1,0 +1,293 @@
+{
+  "navbar": {
+    "home": "Inicio",
+    "services": "Servicios",
+    "about": "Nosotros",
+    "contact": "Contacto",
+    "login": "Iniciar sesión",
+    "register": "Registrarse",
+    "dashboard": "Panel de control",
+    "logout": "Cerrar sesión"
+  },
+  "hero": {
+    "title": "Potencia tu negocio con inteligencia artificial",
+    "subtitle": "Soluciones de IA personalizadas para atención al cliente, ventas automatizadas y sitios web inteligentes.",
+    "cta_primary": "Prueba la demo",
+    "cta_secondary": "Ver casos de éxito"
+  },
+  "how_it_works": {
+    "title": "¿Cómo funciona?",
+    "step1": "Conecta tus datos",
+    "step1_desc": "Integra fácilmente tus bases de datos de clientes y contenido existente.",
+    "step2": "Entrena tu IA",
+    "step2_desc": "Nuestro sistema adapta la IA a tu negocio y sector específico.",
+    "step3": "Activa canales",
+    "step3_desc": "Implementa en web, WhatsApp, email y más en minutos.",
+    "step4": "Analiza resultados",
+    "step4_desc": "Mide el impacto con métricas en tiempo real.",
+    "step5": "Optimiza continuamente",
+    "step5_desc": "Mejora el rendimiento con insights automatizados."
+  },
+  "solutions": {
+    "title": "Ecosistema de soluciones IA",
+    "subtitle": "Herramientas especializadas para cada área de tu negocio",
+    "card1": {
+      "title": "Atención al Cliente Inteligente",
+      "description": "Chatbots multicanal que resuelven consultas con precisión humana."
+    },
+    "card2": {
+      "title": "Ventas Automatizadas",
+      "description": "Asistentes de ventas que generan leads y cierran conversiones."
+    },
+    "card3": {
+      "title": "Sitios Web Inteligentes",
+      "description": "Websites que personalizan la experiencia y convierten visitantes en clientes."
+    },
+    "card4": {
+      "title": "Analítica Predictiva",
+      "description": "Insights automatizados para decisiones de negocio inteligentes."
+    }
+  },
+  "website_ai": {
+    "title": "Sitios Web Inteligentes",
+    "description": "Transformamos tu sitio web en un asistente de ventas 24/7 que entiende y convierte a tus visitantes.",
+    "feature1": "Personalización dinámica",
+    "feature1_desc": "Contenido adaptado en tiempo real según el comportamiento del usuario.",
+    "feature2": "Chatbot integrado",
+    "feature2_desc": "Asistente virtual disponible 24/7 para resolver consultas y guiar a los visitantes.",
+    "feature3": "Analítica avanzada",
+    "feature3_desc": "Datos detallados sobre el comportamiento de los usuarios para optimizar la conversión.",
+    "feature4": "Optimización automática",
+    "feature4_desc": "Mejoras continuas basadas en machine learning y análisis de datos."
+  },
+  "testimonials": {
+    "title": "Lo que dicen nuestros clientes",
+    "testimonial1": {
+      "quote": "ColombiaTIC revolucionó nuestra atención al cliente. El chatbot resuelve el 85% de las consultas sin intervención humana.",
+      "author": "María González",
+      "position": "Directora de Atención al Cliente, TechSolutions S.A.S."
+    },
+    "testimonial2": {
+      "quote": "Implementamos el asistente de ventas y aumentamos nuestras conversiones en un 40% en el primer mes.",
+      "author": "Carlos Ramírez",
+      "position": "Gerente de Ventas, RetailGlobal Ltda."
+    }
+  },
+  "contact": {
+    "title": "¿Listo para transformar tu negocio?",
+    "subtitle": "Contáctanos para una demostración personalizada de nuestras soluciones de IA.",
+    "form": {
+      "name": "Nombre completo",
+      "name_required": "El nombre es requerido",
+      "name_placeholder": "Tu nombre",
+      "email": "Correo electrónico",
+      "email_required": "El email es requerido",
+      "email_invalid": "Email inválido",
+      "email_placeholder": "tu@empresa.com",
+      "company": "Empresa",
+      "company_placeholder": "Nombre de tu empresa",
+      "message": "Mensaje",
+      "message_required": "El mensaje es requerido",
+      "message_placeholder": "Cuéntanos sobre tu proyecto o necesidad...",
+      "send": "Enviar mensaje",
+      "sending": "Enviando...",
+      "send_another": "Enviar otro mensaje"
+    },
+    "success_title": "¡Gracias por tu mensaje!",
+    "success": "¡Gracias por tu mensaje! Nos pondremos en contacto contigo pronto.",
+    "error": "Hubo un error al enviar tu mensaje. Por favor, inténtalo de nuevo."
+  },
+  "footer": {
+    "company": "ColombiaTIC Ingeniería SAS",
+    "description": "Transformando negocios con inteligencia artificial.",
+    "links": "Enlaces",
+    "pricing": "Planes y precios",
+    "documentation": "Documentación",
+    "legal": "Legal",
+    "terms": "Términos y condiciones",
+    "privacy": "Política de privacidad",
+    "data_protection": "Protección de datos",
+    "cookies": "Cookies",
+    "copyright": "© 2025 ColombiaTIC Ingeniería SAS. Todos los derechos reservados."
+  },
+  "legal": {
+    "title": "Compromiso Legal",
+    "privacy": "Política de Privacidad",
+    "documents": "Documentos Legales",
+    "badge": "Certificaciones y Cumplimiento"
+  },
+  "auth": {
+    "sign_in_title": "Inicia sesión en tu cuenta",
+    "no_account": "¿No tienes una cuenta?",
+    "register_link": "Regístrate aquí",
+    "email": "Correo electrónico",
+    "password": "Contraseña",
+    "remember_me": "Recordarme",
+    "forgot_password": "¿Olvidaste tu contraseña?",
+    "signing_in": "Iniciando sesión...",
+    "sign_in": "Iniciar sesión",
+    "login_error": "Error al iniciar sesión",
+    "login_success": "Inicio de sesión exitoso",
+    "create_account": "Crea tu cuenta",
+    "have_account": "¿Ya tienes una cuenta?",
+    "sign_in_link": "Inicia sesión aquí",
+    "full_name": "Nombre completo",
+    "company": "Empresa",
+    "registering": "Registrando...",
+    "register": "Registrarse",
+    "register_error": "Error al registrarse",
+    "register_success": "Registro exitoso",
+    "backend_not_connected": "Backend no conectado",
+    "backend_connected": "Backend conectado",
+    "demo_mode": "Usando modo demo - las credenciales no se validan",
+    "attempting_connection": "Intentando conectar con el servidor...",
+    "connecting_to_backend": "Conectando al backend de producción",
+    "or_continue_with": "O continúa con",
+    "password_requirements": "Mínimo 8 caracteres",
+    "agree_to_terms": "Acepto los",
+    "terms_of_service": "Términos de servicio",
+    "and": "y",
+    "privacy_policy": "Política de privacidad",
+    "footer_text": "Al registrarte, aceptas nuestros Términos de servicio y Política de privacidad",
+    "email_placeholder": "tu@empresa.com",
+    "name_placeholder": "Tu nombre completo",
+    "company_placeholder": "Nombre de tu empresa",
+    "password_placeholder": "••••••••",
+    "missing_credentials": "Por favor, completa todos los campos requeridos."
+  },
+  "dashboard": {
+    "title": "Panel de Control",
+    "overview": "Resumen",
+    "analytics": "Analítica",
+    "dataGovernance": "Gobierno de Datos",
+    "bulkImport": "Importación Masiva",
+    "chat": "Chat Inteligente",
+    "images": "Generador de Imágenes",
+    "videos": "Generador de Videos",
+    "audio": "Generador de Audio",
+    "security": "Seguridad",
+    "billing": "Facturación",
+    "settings": "Configuración",
+    "credits": "Créditos",
+    "chat_sessions": "Sesiones de Chat",
+    "generated_images": "Imágenes Generadas",
+    "recent_activity": "Actividad Reciente",
+    "generated_image": "Imagen generada",
+    "generated_image_desc": "Imagen de paisaje futurista creada con IA",
+    "generated_video": "Video generado",
+    "generated_video_desc": "Video de 30 segundos con narración IA",
+    "chat_session": "Sesión de chat",
+    "chat_session_desc": "Sesión con asistente de ventas",
+    "total_leads": "Leads Totales",
+    "total_sales": "Ventas Totales",
+    "avg_response_time": "Tiempo Promedio de Respuesta",
+    "customer_satisfaction": "Satisfacción del Cliente",
+    "conversation_metrics": "Métricas de Conversación",
+    "sales_metrics": "Métricas de Ventas",
+    "ad_performance": "Rendimiento de Anuncios",
+    "learning_insights": "Insights de Aprendizaje",
+    "no_conversation_data": "No hay datos de conversación disponibles",
+    "no_sales_data": "No hay datos de ventas disponibles",
+    "no_ad_data": "No hay datos de anuncios disponibles",
+    "insight_title_1": "Optimización de Respuestas",
+    "insight_description_1": "Las respuestas más efectivas se identifican automáticamente para mejorar la atención al cliente.",
+    "insight_title_2": "Tendencias de Ventas",
+    "insight_description_2": "Patrones de compra emergentes detectados para maximizar conversiones.",
+    "insight_title_3": "Comportamiento del Usuario",
+    "insight_description_3": "Análisis profundo del comportamiento para personalizar la experiencia.",
+    "welcome": "Bienvenido de nuevo",
+    "user_info": "Información del Usuario",
+    "name": "Nombre",
+    "email": "Correo Electrónico",
+    "quick_actions": "Acciones Rápidas",
+    "view_analytics": "Ver métricas detalladas",
+    "manage_settings": "Configurar tu cuenta",
+    "get_help": "Obtener soporte técnico",
+    "navigation": "Navegación",
+    "refresh": "Actualizar"
+  },
+  "pricing": {
+    "title": "Planes y Precios",
+    "price": "Precios competitivos para empresas de todos los tamaños",
+    "starter": {
+      "name": "Plan Starter",
+      "description": "Perfecto para pequeñas empresas que comienzan con IA"
+    },
+    "business": {
+      "name": "Plan Business",
+      "description": "Ideal para empresas en crecimiento con necesidades avanzadas"
+    },
+    "enterprise": {
+      "name": "Plan Enterprise",
+      "description": "Soluciones completas para grandes organizaciones"
+    },
+    "cta": "Comenzar prueba gratuita",
+    "comparison": "Comparar todos los planes"
+  },
+  "language": {
+    "switch_to_spanish": "Cambiar a Español",
+    "switch_to_english": "Cambiar a Inglés"
+  },
+  "about": {
+    "title": "Nosotros",
+    "description": "Colombia TIC Ingeniería SAS es una empresa colombiana fundada en 2022 con el propósito de liderar el avance tecnológico desde Latinoamérica. Impulsamos soluciones innovadoras en inteligencia artificial, automatización, integración y tecnologías emergentes para transformar sectores estratégicos como defensa, gobierno y agroindustria.",
+    "mission": "Nuestra Misión",
+    "mission_description": "Desarrollar soluciones tecnológicas innovadoras que integren inteligencia artificial, automatización e infraestructura digital, contribuyendo al crecimiento de sectores estratégicos como defensa, gobierno, agroindustria y sociedad civil.",
+    "vision": "Nuestra Visión",
+    "vision_description": "Ser en 2030 el referente latinoamericano en investigación y desarrollo de tecnología basada en inteligencia artificial, soluciones descentralizadas y plataformas de integración digital con impacto positivo y global.",
+    "values": {
+      "innovation": "Innovación Permanente:",
+      "innovation_desc": "Buscamos nuevas formas de resolver desafíos reales.",
+      "ethics": "Ética y Seguridad:",
+      "ethics_desc": "Creamos soluciones responsables y confiables.",
+      "research": "I+D Abierto:",
+      "research_desc": "Fomentamos el desarrollo colectivo.",
+      "sovereignty": "Soberanía Tecnológica:",
+      "sovereignty_desc": "Apostamos por el talento colombiano.",
+      "social_impact": "Impacto Social:",
+      "social_impact_desc": "Todo lo que desarrollamos busca mejorar vidas."
+    },
+    "objectives": {
+      "obj1": "Implementar 3 plataformas IA funcionales en defensa, agro y gobierno.",
+      "obj2": "Desplegar drones autónomos con comunicación sin internet en pruebas reales.",
+      "obj3": "Integrar un bot de trading con IA + ML para operaciones automáticas.",
+      "obj4": "Desarrollar herramientas para campañas políticas con análisis IA.",
+      "obj5": "Alianzas con 5 entidades gubernamentales y 3 universidades en proyectos I+D."
+    },
+    "cta_title": "¿Listo para transformar tu organización con IA?",
+    "cta_description": "En ColombiaTIC estamos construyendo el futuro con tecnología avanzada. Hablemos.",
+    "cta_button": "Contáctanos"
+  },
+  "contact": {
+    "title": "Contáctanos",
+    "description": "Escríbenos para alianzas, proyectos o asesoría especializada.",
+    "name_placeholder": "Tu nombre",
+    "email_placeholder": "Tu correo",
+    "message_placeholder": "Escribe tu mensaje aquí...",
+    "send_button": "Enviar mensaje",
+    "success_message": "✅ Mensaje enviado correctamente.",
+    "error_message": "❌ Hubo un error al enviar el mensaje.",
+    "network_error": "❌ Error de red. Intenta nuevamente."
+  },
+  "services": {
+    "title": "Soluciones Inteligentes",
+    "description": "Tecnología de vanguardia para potenciar tu negocio. Implementación rápida, resultados tangibles.",
+    "ai_chatbot": {
+      "title": "IA Omnicanal de Atención y Ventas",
+      "description": "Automatiza conversaciones y cierra ventas 24/7 en todos tus canales. Implementación en 48h."
+    },
+    "website": {
+      "title": "Sitio Web Comercial con SEO + IA Humanizada",
+      "description": "Web empresarial optimizada para conversiones con IA conversacional integrada y posicionamiento orgánico."
+    },
+    "refactor": {
+      "title": "Refactor Pro de Sitios Web",
+      "description": "Modernización tecnológica de tu sitio con optimización de performance y experiencia de usuario."
+    },
+    "consulting": {
+      "title": "Consultoría Estratégica y Optimización",
+      "description": "Análisis avanzado de tu modelo de negocio con recomendaciones accionables basadas en datos."
+    },
+    "view_plans": "Ver planes y precios →"
+  }
+}

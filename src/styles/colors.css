@@ -1,0 +1,234 @@
+/* Sistema de Colores para ColombiaTIC Branding */
+:root {
+  /* Primary Colors */
+  --color-primary-50: #eff6ff;
+  --color-primary-100: #dbeafe;
+  --color-primary-200: #bfdbfe;
+  --color-primary-300: #93c5fd;
+  --color-primary-400: #60a5fa;
+  --color-primary-500: #3b82f6;
+  --color-primary-600: #2563eb;
+  --color-primary-700: #1d4ed8;
+  --color-primary-800: #1e40af;
+  --color-primary-900: #1e3a8a;
+  
+  /* Secondary Colors */
+  --color-secondary-50: #f0f9ff;
+  --color-secondary-100: #e0f2fe;
+  --color-secondary-200: #bae6fd;
+  --color-secondary-300: #7dd3fc;
+  --color-secondary-400: #38bdf8;
+  --color-secondary-500: #0ea5e9;
+  --color-secondary-600: #0284c7;
+  --color-secondary-700: #0369a1;
+  --color-secondary-800: #075985;
+  --color-secondary-900: #0c4a6e;
+  
+  /* Accent Colors */
+  --color-accent-50: #f5f3ff;
+  --color-accent-100: #ede9fe;
+  --color-accent-200: #ddd6fe;
+  --color-accent-300: #c4b5fd;
+  --color-accent-400: #a78bfa;
+  --color-accent-500: #8b5cf6;
+  --color-accent-600: #7c3aed;
+  --color-accent-700: #6d28d9;
+  --color-accent-800: #5b21b6;
+  --color-accent-900: #4c1d95;
+  
+  /* Tertiary Colors */
+  --color-tertiary-50: #fdf2f8;
+  --color-tertiary-100: #fce7f3;
+  --color-tertiary-200: #fbcfe8;
+  --color-tertiary-300: #f9a8d4;
+  --color-tertiary-400: #f472b6;
+  --color-tertiary-500: #ec4899;
+  --color-tertiary-600: #db2777;
+  --color-tertiary-700: #be185d;
+  --color-tertiary-800: #9d174d;
+  --color-tertiary-900: #831843;
+  
+  /* Neutral Colors */
+  --color-background: #0d1117;
+  --color-surface: #161b22;
+  --color-surface-light: #21262d;
+  --color-border: #30363d;
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #8b949e;
+  --color-text-tertiary: #6e7681;
+  
+  /* Status Colors */
+  --color-success-500: #10b981;
+  --color-warning-500: #f59e0b;
+  --color-error-500: #ef4444;
+  --color-info-500: #3b82f6;
+  
+  /* Gradient Colors */
+  --gradient-primary: linear-gradient(135deg, var(--color-primary-500), var(--color-secondary-500));
+  --gradient-secondary: linear-gradient(135deg, var(--color-accent-500), var(--color-tertiary-500));
+  --gradient-tertiary: linear-gradient(135deg, var(--color-primary-500), var(--color-accent-500));
+}
+
+/* CSS Classes for Colors */
+.bg-primary {
+  background-color: var(--color-primary-500);
+}
+
+.bg-primary-hover:hover {
+  background-color: var(--color-primary-600);
+}
+
+.text-primary {
+  color: var(--color-primary-500);
+}
+
+.border-primary {
+  border-color: var(--color-primary-500);
+}
+
+.bg-secondary {
+  background-color: var(--color-secondary-500);
+}
+
+.text-secondary {
+  color: var(--color-secondary-500);
+}
+
+.border-secondary {
+  border-color: var(--color-secondary-500);
+}
+
+.bg-accent {
+  background-color: var(--color-accent-500);
+}
+
+.text-accent {
+  color: var(--color-accent-500);
+}
+
+.border-accent {
+  border-color: var(--color-accent-500);
+}
+
+.bg-tertiary {
+  background-color: var(--color-tertiary-500);
+}
+
+.text-tertiary {
+  color: var(--color-tertiary-500);
+}
+
+.border-tertiary {
+  border-color: var(--color-tertiary-500);
+}
+
+.bg-background {
+  background-color: var(--color-background);
+}
+
+.bg-surface {
+  background-color: var(--color-surface);
+}
+
+.bg-surface-light {
+  background-color: var(--color-surface-light);
+}
+
+.text-primary {
+  color: var(--color-text-primary);
+}
+
+.text-secondary {
+  color: var(--color-text-secondary);
+}
+
+.text-tertiary {
+  color: var(--color-text-tertiary);
+}
+
+.border-default {
+  border-color: var(--color-border);
+}
+
+/* Gradient backgrounds */
+.bg-gradient-primary {
+  background: var(--gradient-primary);
+}
+
+.bg-gradient-secondary {
+  background: var(--gradient-secondary);
+}
+
+.bg-gradient-tertiary {
+  background: var(--gradient-tertiary);
+}
+
+/* Opacity variations */
+.bg-primary\/10 {
+  background-color: rgb(59 130 246 / 0.1);
+}
+
+.bg-primary\/20 {
+  background-color: rgb(59 130 246 / 0.2);
+}
+
+.bg-primary\/50 {
+  background-color: rgb(59 130 246 / 0.5);
+}
+
+.bg-secondary\/10 {
+  background-color: rgb(14 165 233 / 0.1);
+}
+
+.bg-secondary\/20 {
+  background-color: rgb(14 165 233 / 0.2);
+}
+
+.bg-accent\/10 {
+  background-color: rgb(139 92 246 / 0.1);
+}
+
+.bg-accent\/20 {
+  background-color: rgb(139 92 246 / 0.2);
+}
+
+.bg-tertiary\/10 {
+  background-color: rgb(236 72 153 / 0.1);
+}
+
+.bg-tertiary\/20 {
+  background-color: rgb(236 72 153 / 0.2);
+}
+
+/* Hover states */
+.hover\:bg-primary:hover {
+  background-color: var(--color-primary-600);
+}
+
+.hover\:bg-secondary:hover {
+  background-color: var(--color-secondary-600);
+}
+
+.hover\:bg-accent:hover {
+  background-color: var(--color-accent-600);
+}
+
+.hover\:bg-tertiary:hover {
+  background-color: var(--color-tertiary-600);
+}
+
+.hover\:text-primary:hover {
+  color: var(--color-primary-400);
+}
+
+.hover\:text-secondary:hover {
+  color: var(--color-secondary-400);
+}
+
+.hover\:text-accent:hover {
+  color: var(--color-accent-400);
+}
+
+.hover\:text-tertiary:hover {
+  color: var(--color-tertiary-400);
+}

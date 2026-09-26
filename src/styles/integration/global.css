@@ -1,0 +1,290 @@
+/* src/styles/integration/global.css */
+
+/* Variables CSS para la paleta de colores de ColombiaTIC AI */
+:root {
+  /* Colores de fondo */
+  --colombiatic-bg-primary: #0C1116;
+  --colombiatic-bg-secondary: #1A2633;
+  --colombiatic-bg-tertiary: #0D1117;
+  
+  /* Colores de texto */
+  --colombiatic-text-primary: #E6EDF3;
+  --colombiatic-text-secondary: #A9B8C6;
+  --colombiatic-text-tertiary: #94A3B8;
+  
+  /* Colores de acento */
+  --colombiatic-accent-primary: #3BA5FF;
+  --colombiatic-accent-secondary: #5EA0FF;
+  --colombiatic-accent-tertiary: #89C4FF;
+  
+  /* Colores de borde */
+  --colombiatic-border: rgba(255, 255, 255, 0.07);
+  
+  /* Gradientes */
+  --colombiatic-gradient-metallic: linear-gradient(180deg, #0D1117 0%, #10151B 100%);
+  
+  /* Sombras */
+  --colombiatic-shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.1);
+  
+  /* Transiciones */
+  --colombiatic-transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --colombiatic-transition-normal: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  --colombiatic-transition-slow: 500ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Estilos base para todos los componentes de integración */
+.colombiatic-integration {
+  font-family: 'Inter', 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: var(--colombiatic-text-primary);
+  background-color: var(--colombiatic-bg-primary);
+}
+
+/* Botones */
+.colombiatic-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  transition: all var(--colombiatic-transition-fast);
+  border: 1px solid var(--colombiatic-border);
+  background-color: var(--colombiatic-bg-secondary);
+  color: var(--colombiatic-text-primary);
+  cursor: pointer;
+}
+
+.colombiatic-btn:hover:not(:disabled) {
+  background-color: var(--colombiatic-bg-tertiary);
+  border-color: var(--colombiatic-accent-primary);
+}
+
+.colombiatic-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.colombiatic-btn-primary {
+  background-color: var(--colombiatic-accent-primary);
+  border-color: var(--colombiatic-accent-primary);
+  color: white;
+}
+
+.colombiatic-btn-primary:hover:not(:disabled) {
+  background-color: var(--colombiatic-accent-secondary);
+  border-color: var(--colombiatic-accent-secondary);
+}
+
+/* Inputs */
+.colombiatic-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--colombiatic-border);
+  background-color: var(--colombiatic-bg-secondary);
+  color: var(--colombiatic-text-primary);
+  transition: all var(--colombiatic-transition-fast);
+}
+
+.colombiatic-input:focus {
+  outline: none;
+  border-color: var(--colombiatic-accent-primary);
+  box-shadow: 0 0 0 3px rgba(59, 165, 255, 0.2);
+}
+
+.colombiatic-input::placeholder {
+  color: var(--colombiatic-text-tertiary);
+}
+
+/* Tarjetas */
+.colombiatic-card {
+  background-color: var(--colombiatic-bg-secondary);
+  border: 1px solid var(--colombiatic-border);
+  border-radius: 0.75rem;
+  overflow: hidden;
+  transition: all var(--colombiatic-transition-fast);
+}
+
+.colombiatic-card:hover {
+  border-color: var(--colombiatic-accent-primary);
+  transform: translateY(-2px);
+  box-shadow: var(--colombiatic-shadow-lg);
+}
+
+/* Layout de dos paneles */
+.colombiatic-dual-panel {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.colombiatic-panel-left {
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 420px;
+  padding-top: 72px;
+}
+
+.colombiatic-panel-right {
+  position: fixed;
+  top: 72px;
+  right: 0;
+  width: 420px;
+  height: calc(100vh - 72px);
+  background: var(--colombiatic-gradient-metallic);
+  border-left: 1px solid var(--colombiatic-border);
+  overflow-y: auto;
+}
+
+/* Navbar */
+.colombiatic-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 72px;
+  background-color: rgba(12, 17, 22, 0.8);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--colombiatic-border);
+  z-index: 100;
+  transition: all var(--colombiatic-transition-fast);
+}
+
+.colombiatic-navbar.scrolled {
+  background-color: var(--colombiatic-bg-primary);
+  box-shadow: var(--colombiatic-shadow-lg);
+}
+
+/* Tipografía */
+.colombiatic-heading-1 {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.1;
+  background: linear-gradient(to right, var(--colombiatic-text-primary), var(--colombiatic-accent-primary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.colombiatic-heading-2 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--colombiatic-text-primary);
+}
+
+.colombiatic-heading-3 {
+  font-size: 1.875rem;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--colombiatic-text-primary);
+}
+
+.colombiatic-body-large {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: var(--colombiatic-text-secondary);
+}
+
+.colombiatic-body-medium {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--colombiatic-text-tertiary);
+}
+
+.colombiatic-body-small {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--colombiatic-text-tertiary);
+}
+
+/* Utilidades */
+.colombiatic-glass-effect {
+  background: rgba(26, 38, 51, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--colombiatic-border);
+}
+
+.colombiatic-gradient-text {
+  background: linear-gradient(90deg, var(--colombiatic-accent-primary), var(--colombiatic-accent-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.colombiatic-section-padding {
+  padding: 5rem 1rem;
+}
+
+.colombiatic-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Animaciones */
+@keyframes colombiatic-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.colombiatic-fade-in {
+  animation: colombiatic-fade-in 0.5s ease-out forwards;
+}
+
+@keyframes colombiatic-pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.colombiatic-pulse {
+  animation: colombiatic-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .colombiatic-panel-left {
+    padding-right: 0;
+  }
+  
+  .colombiatic-panel-right {
+    width: 100%;
+    height: 100vh;
+    top: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .colombiatic-heading-1 {
+    font-size: 2.25rem;
+  }
+  
+  .colombiatic-heading-2 {
+    font-size: 1.875rem;
+  }
+  
+  .colombiatic-section-padding {
+    padding: 3rem 1rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .colombiatic-heading-1 {
+    font-size: 1.875rem;
+  }
+  
+  .colombiatic-panel-right {
+    width: 100%;
+  }
+}

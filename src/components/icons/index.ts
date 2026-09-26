@@ -1,0 +1,9 @@
+export { default as ShopifyIcon } from './ShopifyIcon';
+export { default as WooCommerceIcon } from './WooCommerceIcon';
+export { default as MetaIcon } from './MetaIcon';
+export { default as InstagramIcon } from './InstagramIcon';
+export { default as WhatsAppIcon } from './WhatsAppIcon';
+export { default as StripeIcon } from './StripeIcon';
+export { default as WompiIcon } from './WompiIcon';
+export { default as GoogleCloudIcon } from './GoogleCloudIcon';
+export { default as AWSIcon } from './AWSIcon';

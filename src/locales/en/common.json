@@ -1,0 +1,293 @@
+{
+  "navbar": {
+    "home": "Home",
+    "services": "Services",
+    "about": "About",
+    "contact": "Contact",
+    "login": "Login",
+    "register": "Register",
+    "dashboard": "Dashboard",
+    "logout": "Logout"
+  },
+  "hero": {
+    "title": "Power your business with artificial intelligence",
+    "subtitle": "Custom AI solutions for customer service, automated sales, and smart websites.",
+    "cta_primary": "Try the demo",
+    "cta_secondary": "See success cases"
+  },
+  "how_it_works": {
+    "title": "How it works?",
+    "step1": "Connect your data",
+    "step1_desc": "Easily integrate your existing customer databases and content.",
+    "step2": "Train your AI",
+    "step2_desc": "Our system adapts AI to your business and specific industry.",
+    "step3": "Activate channels",
+    "step3_desc": "Deploy on web, WhatsApp, email and more in minutes.",
+    "step4": "Analyze results",
+    "step4_desc": "Measure impact with real-time metrics.",
+    "step5": "Continuously optimize",
+    "step5_desc": "Improve performance with automated insights."
+  },
+  "solutions": {
+    "title": "AI Solutions Ecosystem",
+    "subtitle": "Specialized tools for every area of your business",
+    "card1": {
+      "title": "Intelligent Customer Service",
+      "description": "Multichannel chatbots that resolve queries with human precision."
+    },
+    "card2": {
+      "title": "Automated Sales",
+      "description": "Sales assistants that generate leads and close conversions."
+    },
+    "card3": {
+      "title": "Smart Websites",
+      "description": "Websites that personalize the experience and convert visitors into customers."
+    },
+    "card4": {
+      "title": "Predictive Analytics",
+      "description": "Automated insights for smart business decisions."
+    }
+  },
+  "website_ai": {
+    "title": "Smart Websites",
+    "description": "We transform your website into a 24/7 sales assistant that understands and converts your visitors.",
+    "feature1": "Dynamic personalization",
+    "feature1_desc": "Content adapted in real-time based on user behavior.",
+    "feature2": "Integrated chatbot",
+    "feature2_desc": "Virtual assistant available 24/7 to resolve queries and guide visitors.",
+    "feature3": "Advanced analytics",
+    "feature3_desc": "Detailed data on user behavior to optimize conversion.",
+    "feature4": "Automatic optimization",
+    "feature4_desc": "Continuous improvements based on machine learning and data analysis."
+  },
+  "testimonials": {
+    "title": "What our clients say",
+    "testimonial1": {
+      "quote": "ColombiaTIC revolutionized our customer service. The chatbot resolves 85% of queries without human intervention.",
+      "author": "María González",
+      "position": "Customer Service Director, TechSolutions S.A.S."
+    },
+    "testimonial2": {
+      "quote": "We implemented the sales assistant and increased our conversions by 40% in the first month.",
+      "author": "Carlos Ramírez",
+      "position": "Sales Manager, RetailGlobal Ltda."
+    }
+  },
+  "contact": {
+    "title": "Ready to transform your business?",
+    "subtitle": "Contact us for a personalized demonstration of our AI solutions.",
+    "form": {
+      "name": "Full name",
+      "name_required": "Name is required",
+      "name_placeholder": "Your name",
+      "email": "Email address",
+      "email_required": "Email is required",
+      "email_invalid": "Invalid email",
+      "email_placeholder": "you@company.com",
+      "company": "Company",
+      "company_placeholder": "Your company name",
+      "message": "Message",
+      "message_required": "Message is required",
+      "message_placeholder": "Tell us about your project or need...",
+      "send": "Send message",
+      "sending": "Sending...",
+      "send_another": "Send another message"
+    },
+    "success_title": "Thank you for your message!",
+    "success": "Thank you for your message! We will contact you soon.",
+    "error": "There was an error sending your message. Please try again."
+  },
+  "footer": {
+    "company": "ColombiaTIC Ingeniería SAS",
+    "description": "Transforming businesses with artificial intelligence.",
+    "links": "Links",
+    "pricing": "Pricing",
+    "documentation": "Documentation",
+    "legal": "Legal",
+    "terms": "Terms and conditions",
+    "privacy": "Privacy Policy",
+    "data_protection": "Data Protection",
+    "cookies": "Cookies",
+    "copyright": "© 2025 ColombiaTIC Ingeniería SAS. All rights reserved."
+  },
+  "legal": {
+    "title": "Legal Commitment",
+    "privacy": "Privacy Policy",
+    "documents": "Legal Documents",
+    "badge": "Certifications and Compliance"
+  },
+  "auth": {
+    "sign_in_title": "Sign in to your account",
+    "no_account": "Don't have an account?",
+    "register_link": "Register here",
+    "email": "Email address",
+    "password": "Password",
+    "remember_me": "Remember me",
+    "forgot_password": "Forgot your password?",
+    "signing_in": "Signing in...",
+    "sign_in": "Sign in",
+    "login_error": "Error signing in",
+    "login_success": "Login successful",
+    "create_account": "Create your account",
+    "have_account": "Already have an account?",
+    "sign_in_link": "Sign in here",
+    "full_name": "Full name",
+    "company": "Company",
+    "registering": "Registering...",
+    "register": "Register",
+    "register_error": "Error registering",
+    "register_success": "Registration successful",
+    "backend_not_connected": "Backend not connected",
+    "backend_connected": "Backend connected",
+    "demo_mode": "Using demo mode - credentials are not validated",
+    "attempting_connection": "Attempting to connect to server...",
+    "connecting_to_backend": "Connecting to production backend",
+    "or_continue_with": "Or continue with",
+    "password_requirements": "Minimum 8 characters",
+    "agree_to_terms": "I agree to the",
+    "terms_of_service": "Terms of Service",
+    "and": "and",
+    "privacy_policy": "Privacy Policy",
+    "footer_text": "By registering, you agree to our Terms of Service and Privacy Policy",
+    "email_placeholder": "you@company.com",
+    "name_placeholder": "Your full name",
+    "company_placeholder": "Your company name",
+    "password_placeholder": "••••••••",
+    "missing_credentials": "Please fill in all required fields."
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "overview": "Overview",
+    "analytics": "Analytics",
+    "dataGovernance": "Data Governance",
+    "bulkImport": "Bulk Import",
+    "chat": "Intelligent Chat",
+    "images": "Image Generator",
+    "videos": "Video Generator",
+    "audio": "Audio Generator",
+    "security": "Security",
+    "billing": "Billing",
+    "settings": "Settings",
+    "credits": "Credits",
+    "chat_sessions": "Chat Sessions",
+    "generated_images": "Generated Images",
+    "recent_activity": "Recent Activity",
+    "generated_image": "Generated image",
+    "generated_image_desc": "Futuristic landscape image created with AI",
+    "generated_video": "Generated video",
+    "generated_video_desc": "30-second video with AI narration",
+    "chat_session": "Chat session",
+    "chat_session_desc": "Session with sales assistant",
+    "total_leads": "Total Leads",
+    "total_sales": "Total Sales",
+    "avg_response_time": "Average Response Time",
+    "customer_satisfaction": "Customer Satisfaction",
+    "conversation_metrics": "Conversation Metrics",
+    "sales_metrics": "Sales Metrics",
+    "ad_performance": "Ad Performance",
+    "learning_insights": "Learning Insights",
+    "no_conversation_data": "No conversation data available",
+    "no_sales_data": "No sales data available",
+    "no_ad_data": "No ad data available",
+    "insight_title_1": "Response Optimization",
+    "insight_description_1": "The most effective responses are automatically identified to improve customer service.",
+    "insight_title_2": "Sales Trends",
+    "insight_description_2": "Emerging purchase patterns detected to maximize conversions.",
+    "insight_title_3": "User Behavior",
+    "insight_description_3": "Deep behavior analysis to personalize the experience.",
+    "welcome": "Welcome back",
+    "user_info": "User Information",
+    "name": "Name",
+    "email": "Email Address",
+    "quick_actions": "Quick Actions",
+    "view_analytics": "View detailed metrics",
+    "manage_settings": "Manage your account",
+    "get_help": "Get technical support",
+    "navigation": "Navigation",
+    "refresh": "Refresh"
+  },
+  "pricing": {
+    "title": "Plans & Pricing",
+    "price": "Competitive pricing for businesses of all sizes",
+    "starter": {
+      "name": "Starter Plan",
+      "description": "Perfect for small businesses starting with AI"
+    },
+    "business": {
+      "name": "Business Plan",
+      "description": "Ideal for growing businesses with advanced needs"
+    },
+    "enterprise": {
+      "name": "Enterprise Plan",
+      "description": "Complete solutions for large organizations"
+    },
+    "cta": "Start free trial",
+    "comparison": "Compare all plans"
+  },
+  "language": {
+    "switch_to_spanish": "Switch to Spanish",
+    "switch_to_english": "Switch to English"
+  },
+  "about": {
+    "title": "About Us",
+    "description": "Colombia TIC Engineering SAS is a Colombian company founded in 2022 with the purpose of leading technological advancement from Latin America. We drive innovative solutions in artificial intelligence, automation, integration and emerging technologies to transform strategic sectors such as defense, government and agribusiness.",
+    "mission": "Our Mission",
+    "mission_description": "To develop innovative technological solutions that integrate artificial intelligence, automation and digital infrastructure, contributing to the growth of strategic sectors such as defense, government, agribusiness and civil society.",
+    "vision": "Our Vision",
+    "vision_description": "To be by 2030 the Latin American reference in research and development of technology based on artificial intelligence, decentralized solutions and digital integration platforms with positive and global impact.",
+    "values": {
+      "innovation": "Permanent Innovation:",
+      "innovation_desc": "We seek new ways to solve real challenges.",
+      "ethics": "Ethics and Security:",
+      "ethics_desc": "We create responsible and reliable solutions.",
+      "research": "Open R&D:",
+      "research_desc": "We promote collective development.",
+      "sovereignty": "Technological Sovereignty:",
+      "sovereignty_desc": "We bet on Colombian talent.",
+      "social_impact": "Social Impact:",
+      "social_impact_desc": "Everything we develop seeks to improve lives."
+    },
+    "objectives": {
+      "obj1": "Implement 3 functional AI platforms in defense, agriculture and government.",
+      "obj2": "Deploy autonomous drones with offline communication in real tests.",
+      "obj3": "Integrate a trading bot with AI + ML for automatic operations.",
+      "obj4": "Develop tools for political campaigns with AI analysis.",
+      "obj5": "Partnerships with 5 governmental entities and 3 universities in R&D projects."
+    },
+    "cta_title": "Ready to transform your organization with AI?",
+    "cta_description": "At ColombiaTIC we are building the future with advanced technology. Let's talk.",
+    "cta_button": "Contact Us"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "description": "Write to us for partnerships, projects or specialized advice.",
+    "name_placeholder": "Your name",
+    "email_placeholder": "Your email",
+    "message_placeholder": "Write your message here...",
+    "send_button": "Send message",
+    "success_message": "✅ Message sent successfully.",
+    "error_message": "❌ There was an error sending the message.",
+    "network_error": "❌ Network error. Please try again."
+  },
+  "services": {
+    "title": "Smart Solutions",
+    "description": "Cutting-edge technology to empower your business. Fast implementation, tangible results.",
+    "ai_chatbot": {
+      "title": "Omnichannel AI for Attention and Sales",
+      "description": "Automate conversations and close sales 24/7 across all your channels. Implementation in 48h."
+    },
+    "website": {
+      "title": "Commercial Website with SEO + Humanized AI",
+      "description": "Business website optimized for conversions with integrated conversational AI and organic positioning."
+    },
+    "refactor": {
+      "title": "Pro Refactor of Websites",
+      "description": "Technological modernization of your site with performance optimization and user experience."
+    },
+    "consulting": {
+      "title": "Strategic Consulting and Optimization",
+      "description": "Advanced analysis of your business model with actionable recommendations based on data."
+    },
+    "view_plans": "View plans and prices →"
+  }
+}

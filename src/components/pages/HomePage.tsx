@@ -1,6 +1,6 @@
 // src/app/homepage.tsx
 
-import HeroSection from "@/components/sections/HeroSection";
+import HeroSectionWrapper from "@/components/landing/HeroSectionWrapper";
 import WhyChooseUsSection from "@/components/sections/WhyChooseUsSection";
 import PartnersSection from "@/components/sections/PartnersSection";
 import ServicesSection from "@/components/sections/ServicesSection";
@@ -11,7 +11,7 @@ export default function HomePage() {
   return (
     <main className="flex flex-col space-y-0 pt-[64px]">
 
-      <HeroSection />
+      <HeroSectionWrapper />
       <WhyChooseUsSection />
       <PartnersSection />
       <ServicesSection />
