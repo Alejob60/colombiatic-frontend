@@ -1,14 +1,16 @@
 // src/contexts/TenantContext.tsx
 "use client";
 
-import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
-import { validateCurrentTenant } from '@/services/tenantService';
+import { createContext, useContext, useState, useEffect, useCallback, ReactNode } from 'react';
+import { validateCurrentTenant, validateTenantDomain } from '@/services/tenantService';
 import { Tenant } from '@/types/tenant';
 
 interface TenantContextType {
   tenant: Tenant | null;
   setTenant: (tenant: Tenant | null) => void;
+  validateTenant: (domain: string) => Promise<boolean>;
   isLoading: boolean;
+  loading: boolean;
   error: string | null;
 }
 
@@ -56,8 +58,36 @@ export function TenantProvider({ children }: { children: ReactNode }) {
     console.warn('[TenantContext] Error:', error);
   }
 
+  const validateTenant = useCallback(async (domain: string): Promise<boolean> => {
+    if (!domain.trim()) {
+      return false;
+    }
+
+    try {
+      setIsLoading(true);
+      setError(null);
+
+      const validationResponse = await validateTenantDomain(domain);
+
+      if (validationResponse.valid && validationResponse.tenant) {
+        setTenant(validationResponse.tenant);
+        console.log('[TenantContext] Dominio validado:', validationResponse.tenant.domain);
+        return true;
+      }
+
+      setError(validationResponse.message || 'No se pudo validar el tenant');
+      return false;
+    } catch (err) {
+      console.error('[TenantContext] Error validando dominio de tenant:', err);
+      setError(err instanceof Error ? err.message : 'Error desconocido al validar el tenant');
+      return false;
+    } finally {
+      setIsLoading(false);
+    }
+  }, []);
+
   return (
-    <TenantContext.Provider value={{ tenant, setTenant, isLoading, error }}>
+    <TenantContext.Provider value={{ tenant, setTenant, validateTenant, isLoading, loading: isLoading, error }}>
       {children}
     </TenantContext.Provider>
   );
@@ -75,7 +105,9 @@ export function useTenant() {
       setTenant: () => {
         console.warn('[TenantContext] setTenant llamado fuera de TenantProvider');
       },
+      validateTenant: async () => false,
       isLoading: false,
+      loading: false,
       error: null
     };
   }

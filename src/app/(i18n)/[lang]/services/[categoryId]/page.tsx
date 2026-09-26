@@ -13,7 +13,7 @@ import { useToast } from '@/contexts/ToastContext';
 export default function CategoryPage() {
   const router = useRouter();
   const params = useParams();
-  const categoryId = params.categoryId as string;
+  const categoryId = (params?.categoryId as string) ?? '';
   const { getCategoryById, toggleServiceActive } = useServicesData();
   const { showToast } = useToast();
   

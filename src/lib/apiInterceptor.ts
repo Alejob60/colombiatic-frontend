@@ -1,7 +1,7 @@
 // src/lib/apiInterceptor.ts
 // Interceptor para agregar información de tenant a las solicitudes API
 
-import axios, { AxiosRequestConfig } from 'axios';
+import axios, { InternalAxiosRequestConfig } from 'axios';
 
 // Tenant de referencia para ColombiaTIC AI
 const REFERENCE_TENANT_ID = '7ae71544-d143-4b8f-8ae9-42a8a8c3c6ba';
@@ -11,15 +11,9 @@ const apiClient = axios.create();
 
 // Interceptor de solicitudes
 apiClient.interceptors.request.use(
-  (config: AxiosRequestConfig) => {
+  (config: InternalAxiosRequestConfig) => {
     // Agregar encabezado de tenant a todas las solicitudes
-    if (config.headers) {
-      config.headers['x-tenant-id'] = REFERENCE_TENANT_ID;
-    } else {
-      config.headers = {
-        'x-tenant-id': REFERENCE_TENANT_ID
-      };
-    }
+    config.headers['x-tenant-id'] = REFERENCE_TENANT_ID;
 
     // Agregar otros encabezados comunes si es necesario
     if (!config.headers['Content-Type']) {

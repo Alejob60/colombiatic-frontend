@@ -3,7 +3,7 @@
 
 import { useState, useEffect } from 'react';
 import { MessageCircle, TrendingUp, Clock, CheckCircle, BarChart3, Users, Zap, Bell } from 'lucide-react';
-import ChatSessionsPanel from './ChatSessionsPanel';
+import ChatSessionsPanel, { Session } from './ChatSessionsPanel';
 import AIMetricsChart from './AIMetricsChart';
 import ConversionMetrics from './ConversionMetrics';
 
@@ -23,7 +23,7 @@ const mockMetrics = {
   ]
 };
 
-const mockSessions = [
+const mockSessions: Session[] = [
   {
     id: 1,
     customer: "María López",

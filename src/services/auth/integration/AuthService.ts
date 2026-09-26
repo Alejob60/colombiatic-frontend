@@ -1,5 +1,10 @@
 import axios from 'axios';
-import { getStoredToken, setStoredToken, removeStoredToken } from '@/lib/tokenManager';
+import {
+  storeTokens,
+  clearTokens,
+  getAccessToken,
+  getRefreshToken
+} from '@/lib/tokenManager';
 
 // Tipos para la autenticación
 interface LoginCredentials {
@@ -35,8 +40,10 @@ class AuthService {
       const authData: AuthResponse = response.data;
       
       // Almacenar tokens
-      setStoredToken('access_token', authData.tokens.accessToken);
-      setStoredToken('refresh_token', authData.tokens.refreshToken);
+      storeTokens({
+        accessToken: authData.tokens.accessToken,
+        refreshToken: authData.tokens.refreshToken
+      });
       
       return authData;
     } catch (error) {
@@ -66,7 +73,7 @@ class AuthService {
 
   private async _performTokenRefresh(): Promise<AuthTokens> {
     try {
-      const refreshToken = getStoredToken('refresh_token');
+      const refreshToken = getRefreshToken();
       
       if (!refreshToken) {
         throw new Error('No refresh token available');
@@ -79,15 +86,16 @@ class AuthService {
       const tokens: AuthTokens = response.data;
       
       // Almacenar nuevos tokens
-      setStoredToken('access_token', tokens.accessToken);
-      setStoredToken('refresh_token', tokens.refreshToken);
+      storeTokens({
+        accessToken: tokens.accessToken,
+        refreshToken: tokens.refreshToken
+      });
       
       return tokens;
     } catch (error) {
       console.error('Error al renovar token:', error);
       // Limpiar tokens inválidos
-      removeStoredToken('access_token');
-      removeStoredToken('refresh_token');
+      clearTokens();
       throw error;
     }
   }
@@ -97,7 +105,7 @@ class AuthService {
    */
   async logout(): Promise<void> {
     try {
-      const accessToken = getStoredToken('access_token');
+      const accessToken = getAccessToken();
       
       if (accessToken) {
         // Notificar al backend del cierre de sesión
@@ -111,8 +119,7 @@ class AuthService {
       console.error('Error al cerrar sesión en el backend:', error);
     } finally {
       // Limpiar tokens localmente
-      removeStoredToken('access_token');
-      removeStoredToken('refresh_token');
+      clearTokens();
     }
   }
 
@@ -120,7 +127,7 @@ class AuthService {
    * Obtener token de acceso actual
    */
   getAccessToken(): string | null {
-    return getStoredToken('access_token');
+    return getAccessToken();
   }
 
   /**

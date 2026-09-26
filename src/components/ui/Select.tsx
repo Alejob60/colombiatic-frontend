@@ -34,19 +34,21 @@ const SelectContext = React.createContext<{
   value: string;
   onValueChange?: (value: string) => void;
   disabled?: boolean;
+  children: React.ReactNode;
 }>({
   open: false,
   setOpen: () => {},
   value: '',
   onValueChange: () => {},
   disabled: false,
+  children: null,
 });
 
 const Select: React.FC<SelectProps> = ({ children, value = '', onValueChange, disabled }) => {
   const [open, setOpen] = useState(false);
   
   return (
-    <SelectContext.Provider value={{ open, setOpen, value, onValueChange, disabled }}>
+    <SelectContext.Provider value={{ open, setOpen, value, onValueChange, disabled, children }}>
       <div className="relative">
         {children}
       </div>
@@ -84,19 +86,19 @@ const SelectTrigger: React.FC<SelectTriggerProps> = ({ children, className = '' 
 };
 
 const SelectValue: React.FC<SelectValueProps> = ({ placeholder }) => {
-  const { value } = React.useContext(SelectContext);
+  const { value, children } = React.useContext(SelectContext);
   
   // Find the selected item's children
-  const context = React.useContext(SelectContext);
-  const children = React.Children.toArray(context.children);
-  const selectedItem = children.find(
-    child => React.isValidElement(child) && child.props.value === context.value
+  const childArray = React.Children.toArray(children);
+  const selectedItem = childArray.find(
+    (child): child is React.ReactElement<SelectItemProps> =>
+      React.isValidElement<SelectItemProps>(child) && child.props.value === value
   );
   
   return (
     <>
-      {context.value 
-        ? (React.isValidElement(selectedItem) ? selectedItem.props.children : context.value)
+      {value
+        ? (selectedItem?.props.children ?? value)
         : <span className="text-gray-400">{placeholder}</span>
       }
     </>

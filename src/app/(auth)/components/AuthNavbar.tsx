@@ -8,7 +8,7 @@ import { usePathname } from 'next/navigation';
 
 export default function AuthNavbar() {
   const pathname = usePathname();
-  const isLoginPage = pathname.includes('/login');
+  const isLoginPage = pathname?.includes('/login') ?? false;
 
   return (
     <nav className="fixed w-full z-50 bg-transparent">

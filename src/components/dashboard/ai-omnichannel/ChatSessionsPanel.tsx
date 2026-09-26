@@ -1,7 +1,7 @@
 // src/components/dashboard/ai-omnichannel/ChatSessionsPanel.tsx
 import { MessageCircle, CheckCircle, Clock, AlertCircle } from 'lucide-react';
 
-interface Session {
+export interface Session {
   id: number;
   customer: string;
   channel: string;

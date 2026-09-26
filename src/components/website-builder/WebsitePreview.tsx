@@ -67,7 +67,7 @@ export default function WebsitePreview() {
           <section className="py-12 px-4 bg-gray-800">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-2xl font-bold text-white mb-4">
-                Sección de tipo "{section.type}"
+                Sección de tipo &quot;{section.type}&quot;
               </h2>
               <p className="text-gray-400">
                 Vista previa para este tipo de sección no implementada.

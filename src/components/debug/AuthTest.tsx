@@ -26,7 +26,7 @@ export default function AuthTest() {
       const tokensBefore = getTokens();
       console.log('Tokens before login:', tokensBefore);
       
-      const result = await login(testEmail, testPassword);
+      const result = await login(testEmail);
       setTestResult(result);
       
       // Check tokens after login
@@ -35,7 +35,7 @@ export default function AuthTest() {
       setTokens(tokensAfter);
     } catch (error) {
       console.error('Login error:', error);
-      setTestResult({ success: false, error: error.message });
+          setTestResult({ success: false, error: error instanceof Error ? error.message : 'Unknown error' });
     }
   };
 

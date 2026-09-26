@@ -23,7 +23,7 @@ interface RoleManagementPanelProps {
   onCreateRole: (roleData: Omit<dataGovernanceService.Role, 'id' | 'created_at' | 'updated_at'>) => Promise<void>;
   onUpdateRole: (roleId: string, roleData: Partial<dataGovernanceService.Role>) => Promise<void>;
   onDeleteRole: (roleId: string) => Promise<void>;
-  onAssignRole: (assignment: Omit<dataGovernanceService.UserRoleAssignment, 'id' | 'created_at' | 'updated_at'>) => Promise<void>;
+  onAssignRole: (assignment: Omit<dataGovernanceService.UserRoleAssignment, 'id' | 'created_at' | 'updated_at' | 'instance_id'>) => Promise<void>;
   onRemoveAssignment: (assignmentId: string) => Promise<void>;
   loading: boolean;
   canManageRoles?: boolean;

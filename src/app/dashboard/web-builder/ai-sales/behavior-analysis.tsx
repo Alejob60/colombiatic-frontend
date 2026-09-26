@@ -81,7 +81,10 @@ export default function BehaviorAnalysis() {
                   outerRadius={80}
                   fill="#8884d8"
                   dataKey="percentage"
-                  label={({ type, percentage }) => `${type}: ${percentage}%`}
+                  label={(labelProps) => {
+                    const entry = labelProps.payload as ResponseData;
+                    return `${entry.type}: ${entry.percentage}%`;
+                  }}
                 >
                   {responseData.map((entry, index) => (
                     <Cell key={`cell-${index}`} fill={entry.color} />

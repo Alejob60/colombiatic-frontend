@@ -1,7 +1,7 @@
 // src/components/dashboard/inventory/ProductTable.tsx
 import { Eye, Edit, Trash2, AlertTriangle, CheckCircle } from 'lucide-react';
 
-interface Product {
+export interface Product {
   id: number;
   name: string;
   sku: string;

@@ -3,7 +3,7 @@
 
 import React from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell } from 'recharts';
-import { ConversationMetric } from '@/services/misybot/dashboardService';
+import { ConversationMetric } from '@/services/misybot/dashboardServiceV2';
 
 interface ConversationMetricsChartProps {
   data: ConversationMetric[];

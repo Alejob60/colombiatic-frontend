@@ -277,7 +277,7 @@ export const useDataGovernance = (instanceId: string) => {
     }
   };
   
-  const assignRoleToUser = async (assignment: Omit<dataGovernanceService.UserRoleAssignment, 'id' | 'created_at' | 'updated_at'>) => {
+  const assignRoleToUser = async (assignment: Omit<dataGovernanceService.UserRoleAssignment, 'id' | 'created_at' | 'updated_at' | 'instance_id'>) => {
     try {
       setState(prev => ({ ...prev, loading: true, error: null }));
       

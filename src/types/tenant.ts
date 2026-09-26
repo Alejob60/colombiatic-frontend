@@ -4,6 +4,7 @@
 export interface Tenant {
   id: string;
   name: string;
+  domain: string;
   plan: string;
   status: string;
   createdAt?: string;

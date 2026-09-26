@@ -44,7 +44,9 @@ const competitors = [
   }
 ];
 
-const featureNames = [
+type ComparisonFeatureName = keyof (typeof competitors)[number]['features'];
+
+const featureNames: ComparisonFeatureName[] = [
   "IA Omnicanal",
   "Integración WhatsApp",
   "CRM Automatizado",

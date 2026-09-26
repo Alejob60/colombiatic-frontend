@@ -328,7 +328,7 @@ const BulkImportWizard: React.FC<BulkImportWizardProps> = ({
                   />
                 </div>
                 <div className="text-xs text-gray-400">
-                  Note: You'll need to authenticate with Google after starting the import.
+                  Note: You&apos;ll need to authenticate with Google after starting the import.
                 </div>
               </div>
             </div>

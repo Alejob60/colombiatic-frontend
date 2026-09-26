@@ -78,7 +78,7 @@ export default function HelpPage() {
       setSubject('');
       setMessage('');
     } catch (err) {
-      setError(err.message || 'Error al enviar el mensaje');
+          setError(err instanceof Error ? err.message : 'Error al enviar el mensaje');
     } finally {
       setLoading(false);
     }
@@ -116,7 +116,7 @@ export default function HelpPage() {
                 ))
               ) : (
                 <div className="bg-surface rounded-lg shadow-md p-5 text-center">
-                  <p className="text-gray-300">No se encontraron resultados para "{searchTerm}"</p>
+                  <p className="text-gray-300">No se encontraron resultados para &quot;{searchTerm}&quot;</p>
                 </div>
               )}
             </div>

@@ -3,20 +3,24 @@
 
 import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import { checkAuthStatus } from '@/services/authService';
+import { getAccessToken } from '@/lib/tokenManager';
 
 interface AuthUser {
   id: string;
   name: string;
   email: string;
   role: string;
+  organization_id?: string;
 }
 
 interface AuthContextType {
   isAuthenticated: boolean;
   user: AuthUser | null;
+  token: string | null;
   login: (userId: string) => void;
   logout: () => void;
   loading: boolean;
+  isLoading: boolean;
   error: string | null;
 }
 
@@ -25,6 +29,7 @@ const AuthContext = createContext<AuthContextType | undefined>(undefined);
 export function AuthProvider({ children }: { children: ReactNode }) {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [user, setUser] = useState<AuthUser | null>(null);
+  const [token, setToken] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -36,6 +41,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         const authStatus = await checkAuthStatus();
         setIsAuthenticated(authStatus.isAuthenticated);
         setUser(authStatus.user || null);
+        setToken(getAccessToken());
       } catch (error: any) {
         console.error('Error checking auth status:', error);
         setError('Error al verificar el estado de autenticación. Por favor, inténtalo más tarde.');
@@ -68,11 +74,12 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const logout = () => {
     setUser(null);
     setIsAuthenticated(false);
+    setToken(null);
     setError(null);
   };
 
   return (
-    <AuthContext.Provider value={{ isAuthenticated, user, login, logout, loading, error }}>
+    <AuthContext.Provider value={{ isAuthenticated, user, token, login, logout, loading, isLoading: loading, error }}>
       {children}
     </AuthContext.Provider>
   );
@@ -87,6 +94,7 @@ export function useAuth() {
     return {
       isAuthenticated: false,
       user: null,
+      token: null,
       login: () => {
         console.warn('[AuthContext] login llamado fuera de AuthProvider');
       },
@@ -94,6 +102,7 @@ export function useAuth() {
         console.warn('[AuthContext] logout llamado fuera de AuthProvider');
       },
       loading: false,
+      isLoading: false,
       error: null
     };
   }

@@ -8,6 +8,7 @@ import {
   FileText, 
   CheckCircle, 
   AlertCircle,
+  RefreshCw,
   X
 } from 'lucide-react';
 

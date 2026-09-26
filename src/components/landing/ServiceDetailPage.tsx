@@ -147,7 +147,7 @@ export default function ServiceDetailPage() {
                   <h3 className="text-xl font-bold mb-4">Testimonios</h3>
                   {serviceData.testimonials.map((testimonial, index) => (
                     <div key={index} className="mb-4 last:mb-0">
-                      <p className="text-gray-300 italic mb-3">"{testimonial.content}"</p>
+                      <p className="text-gray-300 italic mb-3">&quot;{testimonial.content}&quot;</p>
                       <div className="font-medium text-white">{testimonial.name}</div>
                       <div className="text-sm text-gray-400">{testimonial.position}</div>
                     </div>

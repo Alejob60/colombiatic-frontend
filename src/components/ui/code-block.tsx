@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { CopyIcon } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { Button } from '@/components/ui/Button';
 
 interface CodeBlockProps {
   code: string;

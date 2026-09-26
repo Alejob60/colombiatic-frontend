@@ -2,6 +2,7 @@
 "use client";
 
 import { useState } from 'react';
+import Link from 'next/link';
 import { usePricing } from '@/contexts/PricingContext';
 import { useTenant } from '@/contexts/TenantContext';
 import { CheckCircle } from 'lucide-react';
@@ -67,12 +68,12 @@ export default function CheckoutForm() {
           Tu cuenta ha sido creada y ya puedes comenzar a usar nuestros servicios.
         </p>
         <div className="mt-8">
-          <a 
+          <Link 
             href="/es/dashboard" 
             className="inline-block bg-primary hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg transition-colors"
           >
             Ir al Dashboard
-          </a>
+          </Link>
         </div>
       </div>
     );
@@ -86,12 +87,12 @@ export default function CheckoutForm() {
           Por favor regresa a la página de precios y selecciona un plan.
         </p>
         <div className="mt-8">
-          <a 
+          <Link 
             href="/es/pricing" 
             className="inline-block bg-primary hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg transition-colors"
           >
             Ver Planes
-          </a>
+          </Link>
         </div>
       </div>
     );

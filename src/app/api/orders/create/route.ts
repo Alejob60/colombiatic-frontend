@@ -1,23 +1,12 @@
 // src/app/api/orders/create/route.ts
 import { NextRequest } from 'next/server';
-import { getServerSession } from "next-auth/next";
-import { authOptions } from "@/lib/auth";
 import wompiService from '@/services/wompi.service';
-import { ServiceItem } from '@/types/colombiatic';
-import servicesData from '@/data/colombiatic-services.json';
+import { getServiceById } from '@/services/serviceCatalog';
 
 export async function POST(request: NextRequest) {
   try {
-    // In a real implementation, you would validate the session
-    // const session = await getServerSession(authOptions);
-    // if (!session) {
-    //   return new Response(JSON.stringify({ error: 'Unauthorized' }), {
-    //     status: 401,
-    //     headers: {
-    //       'Content-Type': 'application/json',
-    //     },
-    //   });
-    // }
+    // In a real implementation, you would validate the session against the
+    // auth provider configured in @/lib/auth and reject unauthenticated calls.
 
     const body = await request.json();
     const { userId, moduleId } = body;
@@ -33,12 +22,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Find the service in our data
-    const allServices: ServiceItem[] = [
-      ...servicesData.products,
-      ...servicesData.modules
-    ];
-    
-    const service = allServices.find(s => s.id === moduleId);
+    const service = getServiceById(moduleId);
     
     if (!service) {
       return new Response(JSON.stringify({ error: 'Service not found' }), {

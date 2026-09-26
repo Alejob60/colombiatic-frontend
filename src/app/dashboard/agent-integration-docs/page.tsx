@@ -1,8 +1,8 @@
 'use client';
 
 import React from 'react';
-import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
+import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/Card';
+import { Badge } from '@/components/ui/Badge';
 import { CodeBlock } from '@/components/ui/code-block';
 
 export default function AgentIntegrationDocsPage() {

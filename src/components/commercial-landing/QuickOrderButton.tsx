@@ -5,7 +5,7 @@ import { useState } from 'react';
 import { useQuickOrder } from '@/hooks/useQuickOrder';
 import { usePaymentStatus } from '@/hooks/usePaymentStatus';
 import { CheckoutModal } from './CheckoutModal';
-import { Button } from '@/components/ui/Button';
+import { Button, type ButtonProps } from '@/components/ui/Button';
 import Loader from '@/components/ui/Loader';
 
 interface QuickOrderButtonProps {
@@ -16,8 +16,8 @@ interface QuickOrderButtonProps {
   onOrderCreated?: (orderId: string) => void;
   onPaymentComplete?: (orderId: string) => void;
   children?: React.ReactNode;
-  variant?: 'default' | 'secondary' | 'outline' | 'ghost' | 'link';
-  size?: 'sm' | 'md' | 'lg';
+  variant?: ButtonProps['variant'];
+  size?: ButtonProps['size'];
   className?: string;
 }
 

@@ -59,7 +59,7 @@ export default function SettingsPage() {
       setNewPassword('');
       setConfirmPassword('');
     } catch (err) {
-      setError(err.message || 'Error al cambiar la contraseña');
+      setError(err instanceof Error ? err.message : 'Error al cambiar la contraseña');
     } finally {
       setLoading(false);
     }
@@ -91,7 +91,7 @@ export default function SettingsPage() {
       
       setSuccess(true);
     } catch (err) {
-      setError(err.message || 'Error al guardar las preferencias');
+      setError(err instanceof Error ? err.message : 'Error al guardar las preferencias');
     } finally {
       setLoading(false);
     }

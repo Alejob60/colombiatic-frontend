@@ -6,7 +6,7 @@ import { usePathname } from 'next/navigation';
 
 export default function SolutionsPage() {
   const pathname = usePathname();
-  const lang = pathname.split('/')[1] || 'es';
+  const lang = pathname?.split('/')[1] || 'es';
 
   // Datos de soluciones en ambos idiomas
   const solutionsData = {

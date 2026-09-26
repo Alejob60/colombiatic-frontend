@@ -281,7 +281,7 @@ const DataControlPanel: React.FC<DataControlPanelProps> = ({
             
             <div className="mb-4">
               <label className="text-sm font-medium text-white block mb-2">
-                Type "PURGE" to confirm
+                Type &quot;PURGE&quot; to confirm
               </label>
               <input
                 type="text"

@@ -2,7 +2,7 @@
 // Cross-business recommendations component
 
 import React from 'react';
-import { CrossBusinessRecommendation } from '@/services/misybot/dashboardService';
+import { CrossBusinessRecommendation } from '@/services/misybot/dashboardServiceV2';
 import { TrendingUp, ShoppingCart, Users, Handshake } from 'lucide-react';
 
 interface RecommendationsCardProps {

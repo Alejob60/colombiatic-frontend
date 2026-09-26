@@ -2,6 +2,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 import { useLanguage } from "@/contexts/LanguageContext";
 import PricingCard from "@/components/ui/PricingCard";
 import { useEffect, useState } from "react";
@@ -188,7 +189,7 @@ export default function Pricing() {
             {t('pricing.compare_desc') || 'Descubre todas las características de cada plan para tomar la mejor decisión'}
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <a
+            <Link
               href="/es/pricing-comparison"
               className="relative inline-flex items-center justify-center px-8 py-4 text-white font-medium text-base rounded-lg bg-primary hover:bg-blue-700 transition duration-300 group overflow-hidden shadow-lg hover:shadow-xl"
             >
@@ -199,7 +200,7 @@ export default function Pricing() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
               </span>
-            </a>
+            </Link>
           </div>
         </motion.div>
       </div>

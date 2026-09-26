@@ -2,6 +2,7 @@
 "use client";
 
 import { useState } from 'react';
+import Link from 'next/link';
 import WebsiteBuilder from '@/components/website-builder/WebsiteBuilder';
 import WebsitePreview from '@/components/website-builder/WebsitePreview';
 import { useWebsiteBuilder } from '@/contexts/WebsiteBuilderContext';
@@ -38,12 +39,12 @@ export default function WebsiteBuilderPage() {
           <p className="text-gray-400 mb-6">
             Debes seleccionar un tenant para acceder al constructor de sitios web.
           </p>
-          <a 
-            href="/tenant-selector" 
+          <Link
+            href="/tenant-selector"
             className="inline-block bg-primary hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-lg transition-colors"
           >
             Seleccionar Tenant
-          </a>
+          </Link>
         </div>
       </div>
     );

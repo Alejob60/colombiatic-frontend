@@ -7,10 +7,10 @@ export const useMetaAgentChat = () => {
   const context = useMetaAgent();
   
   // Función para enviar un mensaje con contexto adicional
-  const sendWithContext = async (message: string, context?: Record<string, any>) => {
+  const sendWithContext = async (message: string, additionalContext?: Record<string, any>) => {
     if (!message.trim()) return;
     
-    await context.sendMessage(message);
+    await context.sendMessage(message, additionalContext);
   };
   
   // Función para obtener el historial de conversación formateado

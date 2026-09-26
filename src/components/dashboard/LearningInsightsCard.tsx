@@ -2,7 +2,7 @@
 // Learning insights display component
 
 import React from 'react';
-import { LearningInsight } from '@/services/misybot/dashboardService';
+import { LearningInsight } from '@/services/misybot/dashboardServiceV2';
 import { Lightbulb, TrendingUp, Users, MessageSquare } from 'lucide-react';
 
 interface LearningInsightsCardProps {

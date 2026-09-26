@@ -152,8 +152,8 @@ export default function PersonaSelector() {
               <div className="mt-6 p-4 bg-gray-900/50 rounded-lg">
                 <h5 className="font-semibold mb-2">Ejemplo de interacción:</h5>
                 <p className="text-gray-400 text-sm">
-                  "Como {selected.name}, puedo ayudarte con tareas específicas de {selected.industry.toLowerCase()}. 
-                  Por ejemplo, si trabajas en {selected.industry.toLowerCase()}, puedo ayudarte a {selected.useCase.split(", ")[0].toLowerCase()}."
+                  &quot;Como {selected.name}, puedo ayudarte con tareas específicas de {selected.industry.toLowerCase()}. 
+                  Por ejemplo, si trabajas en {selected.industry.toLowerCase()}, puedo ayudarte a {selected.useCase.split(", ")[0].toLowerCase()}.&quot;
                 </p>
               </div>
             </div>

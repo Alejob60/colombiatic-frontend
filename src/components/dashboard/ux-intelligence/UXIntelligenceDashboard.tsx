@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react';
 import { Eye, Clock, TrendingUp, AlertTriangle, CheckCircle, BarChart3, Users, Zap } from 'lucide-react';
 import UserBehaviorChart from './UserBehaviorChart';
 import PagePerformanceMetrics from './PagePerformanceMetrics';
-import FrictionPoints from './FrictionPoints';
+import FrictionPoints, { FrictionPoint } from './FrictionPoints';
 
 // Mock data for demonstration
 const mockMetrics = {
@@ -24,7 +24,7 @@ const mockBehaviorData = [
   { page: 'Confirmación', visits: 142, avgTime: 60, bounceRate: 10 }
 ];
 
-const mockFrictionPoints = [
+const mockFrictionPoints: FrictionPoint[] = [
   {
     id: 1,
     page: 'Checkout',

@@ -3,7 +3,7 @@
 
 import React from 'react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from 'recharts';
-import { SalesMetric } from '@/services/misybot/dashboardService';
+import { SalesMetric } from '@/services/misybot/dashboardServiceV2';
 
 interface SalesMetricsChartProps {
   data: SalesMetric[];

@@ -357,7 +357,7 @@ export default function SmartLinksPage() {
             </div>
           </CardContent>
         </Card>
-      }
+      )}
     </div>
   );
 }

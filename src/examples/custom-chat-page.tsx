@@ -6,7 +6,7 @@
 import React from 'react';
 import { useLanguage } from '@/hooks/useLanguage';
 import ColombiaticChatInterface from '@/components/chat/ColombiaticChatInterface';
-import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/card';
+import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/Card';
 
 /**
  * Ejemplo de página personalizada con chat del agente AI

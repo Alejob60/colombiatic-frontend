@@ -1,6 +1,6 @@
 // src/hooks/useServices.ts
 import { useState, useEffect } from 'react';
-import servicesData from '@/data/colombiatic-services.json';
+import { getColombiaTICServices } from '@/services/serviceCatalog';
 import { ColombiaTICServices, ServiceItem } from '@/types/colombiatic';
 import wompiService from '@/services/wompi.service';
 
@@ -15,7 +15,7 @@ export const useServices = () => {
 
   useEffect(() => {
     try {
-      setServices(servicesData as ColombiaTICServices);
+      setServices(getColombiaTICServices());
       setLoading(false);
     } catch (err) {
       setError('Failed to load services data');

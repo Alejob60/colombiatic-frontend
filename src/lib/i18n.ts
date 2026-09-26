@@ -308,7 +308,7 @@ export const useTranslations = () => {
   const pathname = usePathname();
   const locale = pathname?.split('/')[1] || 'es';
   
-  const t = (key: string): string => {
+  const t = (key: string, defaultValue?: string): string => {
     const keys = key.split('.');
     let translation: string | Translations = translations[locale] || translations.es;
     
@@ -316,11 +316,12 @@ export const useTranslations = () => {
       if (typeof translation === 'object' && translation !== null && k in translation) {
         translation = (translation as Translations)[k];
       } else {
-        return key; // Devuelve la clave si no se encuentra la traducción
+        // Devuelve el valor por defecto o la clave si no se encuentra la traducción
+        return defaultValue ?? key;
       }
     }
     
-    return typeof translation === 'string' ? translation : key;
+    return typeof translation === 'string' ? translation : defaultValue ?? key;
   };
   
   return { t, locale };

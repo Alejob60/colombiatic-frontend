@@ -2,7 +2,7 @@
 'use client';
 
 import Image from 'next/image';
-import { motion } from 'framer-motion';
+import { motion, type Variants } from 'framer-motion';
 
 const partners = [
   { src: '/partners/Microsoft3.png', alt: 'Microsoft' },
@@ -10,7 +10,7 @@ const partners = [
   { src: '/partners/Azure.png', alt: 'Azure' },
 ];
 
-const fadeUp = {
+const fadeUp: Variants = {
   hidden: { opacity: 0, y: 40 },
   show: (i: number) => ({
     opacity: 1,

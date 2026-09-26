@@ -19,7 +19,7 @@ interface ChatMessage {
 interface MetaAgentContextType {
   messages: ChatMessage[];
   isProcessing: boolean;
-  sendMessage: (message: string) => Promise<void>;
+  sendMessage: (message: string, context?: Record<string, any>) => Promise<void>;
   clearChat: () => void;
   sessionId: string;
   connectionError: boolean;
@@ -33,7 +33,7 @@ export function MetaAgentProvider({ children }: { children: ReactNode }) {
   const [connectionError, setConnectionError] = useState(false);
   const sessionId = metaAgentService.getSessionId();
 
-  const sendMessage = async (message: string) => {
+  const sendMessage = async (message: string, context?: Record<string, any>) => {
     if (!message.trim()) return;
 
     // Agregar mensaje del usuario al chat
@@ -49,7 +49,7 @@ export function MetaAgentProvider({ children }: { children: ReactNode }) {
 
     try {
       // Procesar con el Front Desk Agent
-      const response = await metaAgentService.processMessage(message);
+      const response = await metaAgentService.processMessage(message, context);
       
       // Resetear el error de conexión si la llamada fue exitosa
       setConnectionError(false);

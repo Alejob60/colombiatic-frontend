@@ -2,18 +2,18 @@
 // Servicios de autenticación para Misybot API con soporte para tenant
 
 import apiClient from '@/lib/apiInterceptor';
-import { LoginCredentials, RegisterCredentials, AuthResponse } from './types';
+import { MisybotLoginRequest, MisybotRegisterRequest, MisybotAuthResponse } from './types';
 
 const API_BASE_URL = process.env.NEXT_PUBLIC_MISYBOT_API_URL || 'https://realculture-backend-g3b9deb2fja4b8a2.canadacentral-01.azurewebsites.net';
 
 /**
  * Login del usuario
  */
-export async function login(credentials: LoginCredentials): Promise<AuthResponse> {
+export async function login(credentials: MisybotLoginRequest): Promise<MisybotAuthResponse> {
   try {
     console.log('[Misybot Auth] Iniciando login con:', credentials.email);
     
-    const response = await apiClient.post<AuthResponse>(
+    const response = await apiClient.post<MisybotAuthResponse>(
       `${API_BASE_URL}/auth/login`,
       credentials
     );
@@ -31,11 +31,11 @@ export async function login(credentials: LoginCredentials): Promise<AuthResponse
 /**
  * Registro de usuario
  */
-export async function register(credentials: RegisterCredentials): Promise<AuthResponse> {
+export async function register(credentials: MisybotRegisterRequest): Promise<MisybotAuthResponse> {
   try {
     console.log('[Misybot Auth] Registrando usuario:', credentials.email);
     
-    const response = await apiClient.post<AuthResponse>(
+    const response = await apiClient.post<MisybotAuthResponse>(
       `${API_BASE_URL}/auth/register`,
       credentials
     );
@@ -90,11 +90,11 @@ export async function logout(): Promise<void> {
 /**
  * Refrescar token
  */
-export async function refreshToken(): Promise<AuthResponse> {
+export async function refreshToken(): Promise<MisybotAuthResponse> {
   try {
     console.log('[Misybot Auth] Refrescando token');
     
-    const response = await apiClient.post<AuthResponse>(
+    const response = await apiClient.post<MisybotAuthResponse>(
       `${API_BASE_URL}/auth/refresh`
     );
     

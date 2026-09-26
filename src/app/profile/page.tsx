@@ -42,7 +42,7 @@ export default function ProfilePage() {
       
       setSuccess(true);
     } catch (err) {
-      setError(err.message || 'Error al actualizar el perfil');
+      setError(err instanceof Error ? err.message : 'Error al actualizar el perfil');
     } finally {
       setLoading(false);
     }

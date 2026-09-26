@@ -202,7 +202,7 @@ export async function deleteRole(instanceId: string, roleId: string): Promise<vo
 /**
  * Assign a role to a user
  */
-export async function assignRoleToUser(instanceId: string, assignment: Omit<UserRoleAssignment, 'id' | 'created_at' | 'updated_at'>): Promise<UserRoleAssignment> {
+export async function assignRoleToUser(instanceId: string, assignment: Omit<UserRoleAssignment, 'id' | 'created_at' | 'updated_at' | 'instance_id'>): Promise<UserRoleAssignment> {
   try {
     const response = await apiClient.post<UserRoleAssignment>(`/instances/${instanceId}/role-assignments`, assignment);
     return response.data;

@@ -9,7 +9,7 @@ import { withAuth } from '@/components/hoc/withAuth';
 import { 
   TestTube, 
   Play, 
-  Stop, 
+  Square, 
   RotateCcw, 
   Download,
   AlertTriangle,

@@ -116,7 +116,7 @@ export default function SectionEditor({ section }: SectionEditorProps) {
       default:
         return (
           <div className="text-gray-400">
-            Editor para sección de tipo "{section.type}" no implementado
+            Editor para sección de tipo &quot;{section.type}&quot; no implementado
           </div>
         );
     }

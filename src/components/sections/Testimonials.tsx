@@ -81,7 +81,7 @@ export default function Testimonials() {
               </div>
               
               <p className="text-gray-300 mb-6 italic">
-                "{testimonial.content}"
+                &quot;{testimonial.content}&quot;
               </p>
               
               <div className="border-t border-gray-800 pt-6">

@@ -1,5 +1,7 @@
 // src/services/wompi.service.ts
-import { Product, Module } from '@/types/colombiatic';
+import { ServiceItem } from '@/types/colombiatic';
+
+export type { ServiceItem };
 
 export interface WompiCreateOrderRequest {
   userId: string;
@@ -13,15 +15,6 @@ export interface WompiOrderResponse {
   checkoutUrl: string;
   orderId: string;
   status: string;
-}
-
-export interface ServiceItem extends Product, Module {
-  id: string;
-  name: string;
-  description: string;
-  price_cop: number;
-  billing_cycle?: string;
-  type?: string;
 }
 
 class WompiService {

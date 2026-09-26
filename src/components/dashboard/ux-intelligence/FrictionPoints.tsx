@@ -1,7 +1,7 @@
 // src/components/dashboard/ux-intelligence/FrictionPoints.tsx
 import { AlertTriangle, CheckCircle } from 'lucide-react';
 
-interface FrictionPoint {
+export interface FrictionPoint {
   id: number;
   page: string;
   issue: string;

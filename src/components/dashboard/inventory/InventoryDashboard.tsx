@@ -3,12 +3,12 @@
 
 import { useState, useEffect } from 'react';
 import { Search, Filter, Plus, Edit, Trash2, Eye, TrendingUp, AlertTriangle, CheckCircle } from 'lucide-react';
-import ProductTable from './ProductTable';
+import ProductTable, { Product } from './ProductTable';
 import InventoryKPIs from './InventoryKPIs';
 import InventoryFilters from './InventoryFilters';
 
 // Mock data for demonstration
-const mockProducts = [
+const mockProducts: Product[] = [
   {
     id: 1,
     name: "Producto A",
