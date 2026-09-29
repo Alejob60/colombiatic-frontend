@@ -103,6 +103,58 @@
   animation: fadeInUp 0.6s ease-out forwards;
 }
 
+/* Seamless partner marquee: the track holds two identical copies, so a
+   translate of exactly -50% lands back on the first copy. */
+@keyframes partnerMarquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes heroDriftA {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(4%, 6%, 0) scale(1.12);
+  }
+}
+
+@keyframes heroDriftB {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1.08);
+  }
+  50% {
+    transform: translate3d(-5%, -4%, 0) scale(1);
+  }
+}
+
+@keyframes heroNodePulse {
+  0%,
+  100% {
+    opacity: 0.25;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.35);
+  }
+}
+
+@keyframes heroScan {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(900%);
+  }
+}
+
 /* Responsive typography */
 @media (max-width: 768px) {
   .responsive-heading {

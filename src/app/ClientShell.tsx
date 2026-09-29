@@ -2,27 +2,29 @@
 
 import { useEffect, useState } from 'react';
 import Navbar from '@/components/landing/Navbar';
-import RightPanelChat from '@/components/landing/RightPanelChat';
+import { useTranslations } from '@/lib/i18n';
 import { MetaAgentProvider } from '@/contexts/MetaAgentContext';
 import { TenantProvider } from '@/contexts/TenantContext';
 import { ChatProvider } from '@/contexts/ChatContext';
 
 export default function ClientShell() {
+  const { locale } = useTranslations();
   const [ready, setReady] = useState(false);
 
   useEffect(() => {
     setReady(true);
   }, []);
 
+  useEffect(() => {
+    document.documentElement.lang = locale;
+  }, [locale]);
+
   return (
     <TenantProvider>
       <ChatProvider>
         <MetaAgentProvider>
           {ready ? (
-            <>
-              <Navbar />
-              <RightPanelChat />
-            </>
+            <Navbar />
           ) : (
             // Placeholder para evitar hydration mismatch
             <nav className="fixed top-0 left-0 w-full h-[72px] z-[9999] bg-[#0C1116] border-b border-white/10">

@@ -1,11 +1,17 @@
 // src/app/(i18n)/[lang]/layout.tsx
 
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 import { Geist, Geist_Mono } from "next/font/google";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import BaseLayout from '@/app/base-layout';
 import ClientShell from '@/app/ClientShell';
 import RightPanelChat from '@/components/landing/RightPanelChat';
+import PartnerTicker from '@/components/landing/PartnerTicker';
+
+import { locales } from '@/lib/locales';
+
+const SUPPORTED_LOCALES: string[] = locales.map((entry) => entry.locale);
 
 const geistSans = Geist({
   subsets: ["latin"],
@@ -49,64 +55,30 @@ export default async function RootLayout({
   // Await the params to resolve the dynamic segment
   const { lang } = await params;
 
+  if (!SUPPORTED_LOCALES.includes(lang)) {
+    notFound();
+  }
+
   return (
-    <html lang="es" className="scroll-smooth">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} font-sans bg-background text-textPrimary antialiased min-h-screen`}
-      >
-        <BaseLayout>
-          <LanguageProvider initialLocale={lang as any}>
-            <div className="min-h-screen bg-[#0C1116]">
-              <div className="fixed top-0 left-0 w-full z-[9999]">
-                <ClientShell />
-              </div>
-              
-              {/* Versión desktop - Layout dual panel */}
-              <div className="hidden md:flex pt-[72px]">
-                {/* Panel izquierdo - Contenido con scroll */}
-                <div className="flex-1 overflow-y-auto pr-[420px]">
-                  <main className="p-6">
-                    {children}
-                  </main>
-                </div>
-                
-                {/* Panel derecho - Asistente IA fijo */}
-                <div className="fixed top-[72px] right-0 w-[420px] h-[calc(100vh-72px)] z-[9998] border-l border-[rgba(255,255,255,0.07)]">
-                  <div 
-                    className="h-full"
-                    style={{
-                      background: 'linear-gradient(145deg, #0D1117, #10151B)',
-                    }}
-                  >
-                    <RightPanelChat />
-                  </div>
-                </div>
-              </div>
-              
-              {/* Versión mobile */}
-              <div className="md:hidden pt-[72px] flex flex-col h-screen">
-                <div className="flex-1 overflow-y-auto p-4">
-                  <main className="p-4">
-                    {children}
-                  </main>
-                </div>
-                
-                {/* Chat container centrado en mobile */}
-                <div className="mx-4 mb-6 rounded-2xl overflow-hidden border border-[rgba(255,255,255,0.07)]">
-                  <div 
-                    className="backdrop-blur-2xl rounded-2xl"
-                    style={{
-                      background: 'linear-gradient(145deg, #0D1117, #10151B)',
-                    }}
-                  >
-                    <RightPanelChat />
-                  </div>
-                </div>
-              </div>
+    <div
+      className={`${geistSans.variable} ${geistMono.variable} font-sans bg-background text-textPrimary antialiased min-h-screen scroll-smooth`}
+    >
+      <BaseLayout>
+        <LanguageProvider initialLocale={lang as any}>
+          <div className="min-h-screen bg-[#0C1116]">
+            <div className="fixed top-0 left-0 w-full z-[9999]">
+              <ClientShell />
             </div>
-          </LanguageProvider>
-        </BaseLayout>
-      </body>
-    </html>
+
+            <div className="pt-[72px]">
+              <PartnerTicker />
+              <main className="p-4 sm:p-6">{children}</main>
+            </div>
+
+            <RightPanelChat />
+          </div>
+        </LanguageProvider>
+      </BaseLayout>
+    </div>
   );
 }

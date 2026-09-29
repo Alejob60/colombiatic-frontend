@@ -3,9 +3,10 @@
 
 import { useState } from 'react';
 import PricingPlans from '@/components/pricing/PricingPlans';
+import { PricingProvider } from '@/contexts/PricingContext';
 import { useTenant } from '@/contexts/TenantContext';
 
-export default function PricingPage() {
+function PricingContent() {
   const { tenant } = useTenant();
   const [showAnnual, setShowAnnual] = useState(false);
 
@@ -76,5 +77,13 @@ export default function PricingPage() {
         </div>
       </div>
     </div>
+  );
+}
+
+export default function PricingPage() {
+  return (
+    <PricingProvider>
+      <PricingContent />
+    </PricingProvider>
   );
 }

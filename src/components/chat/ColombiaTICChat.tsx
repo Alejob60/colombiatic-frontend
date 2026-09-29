@@ -3,6 +3,7 @@
 
 import { useState, useRef, useEffect } from 'react';
 import { useMetaAgent } from '@/contexts/MetaAgentContext';
+import { useTranslations } from '@/lib/i18n';
 import { Send, RotateCcw } from 'lucide-react';
 
 // Definir la interfaz para los mensajes
@@ -18,6 +19,7 @@ interface ChatMessage {
 }
 
 const ColombiaTICChat = () => {
+  const { t } = useTranslations();
   const [inputMessage, setInputMessage] = useState('');
   const messagesEndRef = useRef<HTMLDivElement>(null);
   
@@ -81,16 +83,15 @@ const ColombiaTICChat = () => {
   };
 
   return (
-    <div className="flex flex-col h-full bg-gray-900 rounded-xl overflow-hidden">
-      {/* Header */}
-      <div className="bg-gray-800 px-4 py-3 border-b border-gray-700 flex justify-between items-center">
-        <h3 className="text-lg font-semibold text-white">Asistente IA ColombiaTIC</h3>
-        <button 
+    <div className="flex flex-col h-full">
+      <div className="flex justify-end items-center px-3 pt-2">
+        <button
           onClick={clearChat}
-          className="text-gray-400 hover:text-white transition-colors"
-          title="Limpiar chat"
+          aria-label={t('chat.clearChat')}
+          title={t('chat.clearChat')}
+          className="grid h-7 w-7 place-items-center rounded-lg text-[#94A3B8] transition-colors hover:bg-white/10 hover:text-white"
         >
-          <RotateCcw size={18} />
+          <RotateCcw size={14} />
         </button>
       </div>
 
@@ -103,15 +104,15 @@ const ColombiaTICChat = () => {
                 <span className="text-white font-bold">!</span>
               </div>
             </div>
-            <h4 className="text-lg font-medium mb-2 text-red-400">Error de conexión</h4>
+            <h4 className="text-lg font-medium mb-2 text-red-400">{t('chat.errorConnection')}</h4>
             <p className="text-sm max-w-xs text-gray-400">
-              No se pudo conectar con el servicio de IA. Por favor, verifica tu conexión a internet e inténtalo nuevamente.
+              {t('chat.errorConnectionBody')}
             </p>
             <button
               onClick={clearChat}
               className="mt-4 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm transition-colors"
             >
-              Reintentar
+              {t('chat.retry')}
             </button>
           </div>
         ) : messages.length === 0 ? (
@@ -121,9 +122,9 @@ const ColombiaTICChat = () => {
                 <span className="text-white font-bold">AI</span>
               </div>
             </div>
-            <h4 className="text-lg font-medium mb-2">¡Hola! Soy tu asistente IA de ColombiaTIC</h4>
+            <h4 className="text-lg font-medium mb-2 text-[#E6EDF3]">{t('chat.greeting')}</h4>
             <p className="text-sm max-w-xs">
-              Puedo ayudarte a crear videos, programar publicaciones, analizar tendencias y mucho más.
+              {t('chat.greetingHint')}
             </p>
           </div>
         ) : (
@@ -185,7 +186,7 @@ const ColombiaTICChat = () => {
             value={inputMessage}
             onChange={(e) => setInputMessage(e.target.value)}
             onKeyPress={handleKeyPress}
-            placeholder="Escribe tu mensaje..."
+            placeholder={t('chat.placeholder')}
             className="flex-1 bg-gray-700 text-white rounded-lg px-3 py-2 resize-none focus:outline-none focus:ring-2 focus:ring-blue-500"
             rows={1}
             disabled={isProcessing || connectionError}
