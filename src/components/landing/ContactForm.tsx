@@ -15,16 +15,20 @@ type ErrorKey =
   | 'landing.contact.errors.emailInvalid'
   | 'landing.contact.errors.company'
   | 'landing.contact.errors.role'
-  | 'landing.contact.errors.challenge';
+  | 'landing.contact.errors.challenge'
+  | 'landing.contact.errorBody'
+  | 'landing.contact.rateLimited'
+  | 'landing.contact.deliveryFailed';
 
-interface ContactFormValues {
+type ContactFormValues = {
   name: string;
   email: string;
   company: string;
   role: string;
   challenge: string;
   interests: InterestKey[];
-}
+  website: string;
+};
 
 const INTERESTS: InterestKey[] = ['government', 'business', 'investment'];
 
@@ -35,6 +39,7 @@ const EMPTY_VALUES: ContactFormValues = {
   role: '',
   challenge: '',
   interests: [],
+  website: '',
 };
 
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -50,11 +55,12 @@ const HINT_CLASS = 'text-xs text-[#94A3B8]';
 const ERROR_CLASS = 'mt-2 text-sm text-red-400';
 
 export default function ContactForm() {
-  const { t } = useTranslations();
+  const { t, locale } = useTranslations();
 
   const [values, setValues] = useState<ContactFormValues>(EMPTY_VALUES);
   const [errors, setErrors] = useState<Partial<Record<FieldName, ErrorKey>>>({});
   const [status, setStatus] = useState<FormStatus>('idle');
+  const [failure, setFailure] = useState<'rate' | 'delivery' | null>(null);
 
   const handleChange = (
     event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -115,6 +121,7 @@ export default function ContactForm() {
     if (!validate()) return;
 
     setStatus('submitting');
+    setFailure(null);
 
     try {
       const response = await fetch('/api/lead', {
@@ -127,10 +134,14 @@ export default function ContactForm() {
           role: values.role.trim(),
           challenge: values.challenge.trim(),
           interests: values.interests,
+          website: values.website,
+          locale,
         }),
       });
 
       if (!response.ok) {
+        if (response.status === 429) setFailure('rate');
+        else if (response.status >= 500) setFailure('delivery');
         throw new Error(`lead_submission_failed:${response.status}`);
       }
 
@@ -145,7 +156,15 @@ export default function ContactForm() {
     setValues(EMPTY_VALUES);
     setErrors({});
     setStatus('idle');
+    setFailure(null);
   };
+
+  const errorMessage: ErrorKey =
+    failure === 'rate'
+      ? 'landing.contact.rateLimited'
+      : failure === 'delivery'
+        ? 'landing.contact.deliveryFailed'
+        : 'landing.contact.errorBody';
 
   const isSubmitting = status === 'submitting';
 
@@ -201,12 +220,25 @@ export default function ContactForm() {
                     {t('landing.contact.errorTitle')}
                   </p>
                   <p className="mt-1 text-sm text-red-300/80">
-                    {t('landing.contact.errorBody')}
+                    {t(errorMessage)}
                   </p>
                 </div>
               )}
 
               <form onSubmit={handleSubmit} noValidate className="space-y-6">
+                <div aria-hidden="true" className="absolute left-[-9999px] top-auto h-px w-px overflow-hidden">
+                  <label htmlFor="contact-website">Website</label>
+                  <input
+                    id="contact-website"
+                    name="website"
+                    type="text"
+                    tabIndex={-1}
+                    autoComplete="off"
+                    value={values.website}
+                    onChange={handleChange}
+                  />
+                </div>
+
                 <div className="grid gap-6 sm:grid-cols-2">
                   <div>
                     <label htmlFor="contact-name" className={LABEL_CLASS}>

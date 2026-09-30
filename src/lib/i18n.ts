@@ -248,6 +248,8 @@ const translations: Record<string, Translations> = {
         successBody: 'Nuestro equipo de arquitectura se pondrá en contacto contigo en menos de 48 horas hábiles.',
         errorTitle: 'No pudimos enviar la solicitud',
         errorBody: 'Revisa los campos marcados e inténtalo de nuevo.',
+        rateLimited: 'Has enviado demasiadas solicitudes. Espera unos minutos e inténtalo de nuevo.',
+        deliveryFailed: 'No pudimos registrar tu solicitud en este momento. Escríbenos directamente a enterprise@colombiatic.com.co',
         errors: {
           name: 'El nombre es requerido',
           email: 'El email es requerido',
@@ -679,6 +681,8 @@ const translations: Record<string, Translations> = {
         successBody: 'Our architecture team will get in touch within 48 business hours.',
         errorTitle: 'We could not send your request',
         errorBody: 'Please review the highlighted fields and try again.',
+        rateLimited: 'You have sent too many requests. Please wait a few minutes and try again.',
+        deliveryFailed: 'We could not register your request right now. Please email us directly at enterprise@colombiatic.com.co',
         errors: {
           name: 'Name is required',
           email: 'Email is required',
