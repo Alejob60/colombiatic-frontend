@@ -1,10 +1,62 @@
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
-// Enhanced security middleware
+/**
+ * Rutas reales de primer nivel de `src/app`, mas los dos locales de
+ * `src/lib/locales.ts`. Se declara explicito y no derivado a proposito: es la
+ * lista que decide que Paths son legos, asi que tiene que poder auditarse.
+ */
+const RUTAS_VALIDAS = new Set([
+  // Locales reales.
+  'es',
+  'en',
+  // Paginas publicas.
+  'about',
+  'cases',
+  'contact',
+  'help',
+  'industries',
+  'resources',
+  'services',
+  'solutions',
+  // Aplicacion autenticada.
+  'dashboard',
+  'profile',
+  'settings',
+  'chat-layout',
+  'demo',
+  // Arneses internos publicados en el build.
+  'chat-test',
+  'colombiatic-agent-test',
+  'orchestrator-test',
+  'widget-test',
+]);
+
+/**
+ * Enhanced security middleware
+ */
 export function middleware(request: NextRequest) {
   const response = NextResponse.next();
-  
+  const pathname = request.nextUrl.pathname;
+
+  // Cualquier ruta de un solo segmento que no sea una ruta real la reclama
+  // `/(i18n)/[lang]`, cuyo layout hace `notFound()` para locales invalidos.
+  // En Next 15.3.0 ese camino revienta con
+  // `TypeError: Cannot read properties of undefined (reading 'entryCSSFiles')`
+  // y responde 500 en vez de 404, tanto con boundary en la raiz como dentro
+  // del grupo i18n.
+  //
+  // Por eso no se usa `notFound()`: se reescribe a una ruta que no matchea
+  // ningun segmento, y ahi responde el 404 nativo del router, que si funciona.
+  // Dos segmentos a proposito: con uno solo el destino volveria a matchear
+  // `/(i18n)/[lang]` y a fallar por la misma razon.
+  const segmentos = pathname.split('/').filter(Boolean);
+  if (segmentos.length === 1 && !RUTAS_VALIDAS.has(segmentos[0])) {
+    const url = request.nextUrl.clone();
+    url.pathname = '/__ruta-inexistente__/404';
+    return NextResponse.rewrite(url);
+  }
+
   // Security headers
   response.headers.set('X-Frame-Options', 'DENY');
   response.headers.set('X-Content-Type-Options', 'nosniff');
@@ -39,6 +91,6 @@ export const config = {
      * - _next/image (image optimization files)
      * - favicon.ico (favicon file)
      */
-    '/((?!api|_next/static|_next/image|favicon.ico).*)',
+    '/((?!api|_next/static|_next/image|favicon.ico|robots.txt|sitemap.xml).*)',
   ],
 };
