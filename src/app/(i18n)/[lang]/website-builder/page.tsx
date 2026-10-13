@@ -5,10 +5,23 @@ import { useState } from 'react';
 import Link from 'next/link';
 import WebsiteBuilder from '@/components/website-builder/WebsiteBuilder';
 import WebsitePreview from '@/components/website-builder/WebsitePreview';
-import { useWebsiteBuilder } from '@/contexts/WebsiteBuilderContext';
+import { useWebsiteBuilder, WebsiteBuilderProvider } from '@/contexts/WebsiteBuilderContext';
 import { useTenant } from '@/contexts/TenantContext';
 
+/**
+ * `WebsiteBuilderProvider` estaba definido pero no se montaba en ningun lado del
+ * arbol, asi que `useWebsiteBuilder` lanzaba en render y la ruta devolvia 500.
+ * Montarlo aqui es lo que hace que la pagina exista.
+ */
 export default function WebsiteBuilderPage() {
+  return (
+    <WebsiteBuilderProvider>
+      <WebsiteBuilderContent />
+    </WebsiteBuilderProvider>
+  );
+}
+
+function WebsiteBuilderContent() {
   const { website, loading, error } = useWebsiteBuilder();
   const { tenant } = useTenant();
   const [activeTab, setActiveTab] = useState<'builder' | 'preview'>('builder');

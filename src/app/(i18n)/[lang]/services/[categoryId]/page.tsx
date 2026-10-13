@@ -8,9 +8,23 @@ import { useState } from 'react';
 import { useServicesData, Service } from '@/hooks/useServicesData';
 import ServiceListItem from '@/components/services/ServiceListItem';
 import ServiceActionsPopup from '@/components/services/ServiceActionsPopup';
-import { useToast } from '@/contexts/ToastContext';
+import { useToast, ToastProvider } from '@/contexts/ToastContext';
 
+/**
+ * `ToastProvider` solo se montaba en los layouts del dashboard, asi que esta
+ * pagina publica que usa `useToast` lanzaba en render y `/es/services/<slug>`
+ * devolvia 500 mientras `/services/<slug>` (otra ruta distinta) funcionaba.
+ * Es el mismo patron que usa `(dashboard)/layout.tsx`.
+ */
 export default function CategoryPage() {
+  return (
+    <ToastProvider>
+      <CategoryContent />
+    </ToastProvider>
+  );
+}
+
+function CategoryContent() {
   const router = useRouter();
   const params = useParams();
   const categoryId = (params?.categoryId as string) ?? '';

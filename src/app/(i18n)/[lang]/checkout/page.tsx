@@ -2,9 +2,23 @@
 "use client";
 
 import CheckoutForm from '@/components/pricing/CheckoutForm';
-import { usePricing } from '@/contexts/PricingContext';
+import { PricingProvider, usePricing } from '@/contexts/PricingContext';
 
+/**
+ * `PricingProvider` solo estaba montado dentro de `pricing/page.tsx`, asi que
+ * al navegar a /checkout directamente React lanzaba
+ * "usePricing must be used within a PricingProvider" y la pagina devolvia 500.
+ * Montarlo aqui cubre el acceso por URL, que es como entra un enlace de pago.
+ */
 export default function CheckoutPage() {
+  return (
+    <PricingProvider>
+      <CheckoutContent />
+    </PricingProvider>
+  );
+}
+
+function CheckoutContent() {
   const { selectedPlan } = usePricing();
 
   return (
