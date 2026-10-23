@@ -19,6 +19,10 @@ const RUTAS_VALIDAS = new Set([
   'resources',
   'services',
   'solutions',
+  // Páginas legales.
+  'privacidad',
+  'terminos',
+  'cookies',
   // Aplicacion autenticada.
   'dashboard',
   'profile',
